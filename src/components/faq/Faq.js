@@ -6,7 +6,7 @@ function Faq() {
     return (
         <div className={style.faq}>
             <div className={style.faq__child}>
-                <h2>Имея при себе много <br /> опыта, мы можем <br /> помочь в процветании <br /> <u>вашего</u> 🫵🏻 бизнеса</h2>
+                <h2>Имея при себе много опыта, мы можем помочь в процветании <u>вашего</u> бизнеса</h2>
                 <div className={style.accordion}>
                     {accordionData.map(({ title, content }) => (
                         <Accordion title={title} content={content} />

@@ -4,13 +4,17 @@
     width: 100%;
     height: 720px;
     background-color: $main-theme-dark;
+    font-family: $font-family;
     box-sizing: border-box;
     color: $main-text-color;
-    padding: 152px 0 60px 0;
+    padding: $padding-container;
+    padding: 150px 0 60px 0;
+
     .faq__child{
         display: flex;
         justify-content: space-around;
         h2{
+            max-width: 350px;
             font-size: 32px;
             font-weight: 540;
             line-height: 32px;
@@ -26,4 +30,17 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 200px;
+}
+@media only screen and (max-width: 768px){
+    .faq{
+        padding: 20px;
+    }
+    .faq__child{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .accordion{
+        margin-bottom: 150px;
+    }
 }
