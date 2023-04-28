@@ -7,40 +7,47 @@
     font-family: $font-family;
     box-sizing: border-box;
     color: $main-text-color;
+    // agar boshqa paddingga qiymat berilsa eskisini o`chirsa yaxshi
     padding: $padding-container;
     padding: 150px 0 60px 0;
 
-    .faq__child{
+    .faq__child {
         display: flex;
         justify-content: space-around;
-        h2{
+
+        h2 {
             max-width: 350px;
             font-size: 32px;
             font-weight: 540;
             line-height: 32px;
         }
     }
-    button{
+
+    button {
         margin: 0 auto;
     }
 }
-.accordion{
+
+.accordion {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-bottom: 200px;
 }
-@media only screen and (max-width: 768px){
-    .faq{
+
+@media only screen and (max-width: 768px) {
+    .faq {
         padding: 20px;
     }
-    .faq__child{
+
+    .faq__child {
         flex-direction: column;
         align-items: center;
         gap: 50px;
     }
-    .accordion{
+
+    .accordion {
         margin-bottom: 150px;
     }
 }
