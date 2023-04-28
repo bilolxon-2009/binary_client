@@ -1,0 +1,19 @@
+@import "../../../variables";
+
+.accordion__item{
+    max-width: 420px;
+}
+.accordion__title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 410px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+}
+.line{
+    width: 419px;
+    height: 0px;
+    border: 1px solid #ffffff80;
+}
