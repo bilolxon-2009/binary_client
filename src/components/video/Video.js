@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./Video.module.scss"
-import backgroundVideo from "../../essets/bacgroundVideo.mp4"
 import ReactPlayer from "react-player"
+import backgroundVideo from "../../essets/bacgroundVideo.mp4"
 import suitcase from "../../essets/suitcase.svg"
 import smilyIcon from "../../essets/smile.svg"
 
