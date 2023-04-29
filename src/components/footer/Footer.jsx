@@ -4,7 +4,7 @@ import style from "./Footer.module.scss"
 
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id='footer'>
       <h1>Footer</h1>
     </div>
   )
