@@ -13,8 +13,6 @@ function Faq() {
                     ))}
                 </div>
             </div>
-
-            {/* ichiga spanni qo`shdim */}
             <button className='btns'><span>Оставить заявку</span></button>
         </div>
     );

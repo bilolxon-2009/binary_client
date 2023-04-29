@@ -13,6 +13,7 @@
     .faq__child {
         display: flex;
         justify-content: space-between;
+        gap: 50px;
         h2 {
             max-width: 350px;
             font-size: 32px;
@@ -23,6 +24,7 @@
     button {
         position: absolute;
         bottom: 60px;
+        right: 40%;
     }
 }
 
@@ -36,15 +38,14 @@
 @media only screen and (max-width: 768px) {
     .faq {
         padding: 20px;
+        button{
+            right: 30%;
+            margin-left: 100px;
+        }
     }
 
     .faq__child {
         flex-direction: column;
         align-items: center;
-        gap: 50px;
-    }
-
-    .accordion {
-        margin-bottom: 150px;
     }
 }
