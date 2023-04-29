@@ -7,14 +7,13 @@
     font-family: $font-family;
     box-sizing: border-box;
     color: $main-text-color;
-    // agar boshqa paddingga qiymat berilsa eskisini o`chirsa yaxshi
-    padding: $padding-container;
-    padding: 150px 0 60px 0;
+    padding: 150px 130px 0 130px;
+    position: relative;
 
     .faq__child {
         display: flex;
-        justify-content: space-around;
-
+        justify-content: space-between;
+        gap: 50px;
         h2 {
             max-width: 350px;
             font-size: 32px;
@@ -22,9 +21,10 @@
             line-height: 32px;
         }
     }
-
     button {
-        margin: 0 auto;
+        position: absolute;
+        bottom: 60px;
+        right: 40%;
     }
 }
 
@@ -33,21 +33,19 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 200px;
 }
 
 @media only screen and (max-width: 768px) {
     .faq {
         padding: 20px;
+        button{
+            right: 30%;
+            margin-left: 100px;
+        }
     }
 
     .faq__child {
         flex-direction: column;
         align-items: center;
-        gap: 50px;
-    }
-
-    .accordion {
-        margin-bottom: 150px;
     }
 }
