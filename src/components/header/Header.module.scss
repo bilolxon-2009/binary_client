@@ -9,6 +9,11 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10000;
 
   ul {
     display: flex;
@@ -16,6 +21,7 @@
     width: 30%;
     // border: 2px solid white;
     justify-content: space-between;
+    margin-right: 200px;
 
     li {
 
