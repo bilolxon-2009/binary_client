@@ -1,15 +1,12 @@
 @import "../../../variables";
 
-.accordion__item{
-    max-width: 420px;
-}
 .accordion__title{
     display: flex;
     justify-content: space-between;
     gap: 68px;
     margin-bottom: 10px;
     font-size: 24px;
-    font-weight: 410px;
+    font-weight: 400px;
     line-height: 29px;
     letter-spacing: 0.02em;
 }
