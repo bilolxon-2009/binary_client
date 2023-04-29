@@ -6,7 +6,7 @@ import imgColor from "../../essets/🧑_🎨.svg"
 import ImgGroup from "../../essets/coders-discussing-about-source-code-compiling-discovers-errors-asks-rest-team-explanations-front-multiple-screens-running-algorithms-software-developers-doing-teamwork 1.jpg"
 function Banner() {
     return (
-        <div className={style.banner}>
+        <div className={style.banner} id='banner'>
             <h1 className={style.text}>Команда лучших  <img src={imgomp} alt="" />   программистов
                 <br /> и  <img src={imgColor} alt="" />   дизайнеров в вашей стране</h1>
 

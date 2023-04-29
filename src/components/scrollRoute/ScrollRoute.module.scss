@@ -1,0 +1,54 @@
+.rounds {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: dodgerblue; */
+    position: fixed;
+    top: 40%;
+    align-items: center;
+    right: 50px;
+    overflow: hidden;
+    z-index: 100;
+
+    .line1 {
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+    }
+
+    &>ul {
+        display: flex;
+        place-items: center;
+        flex-direction: column;
+        transition: 0.3s;
+        /* height: 50%; */
+        /* border: 2px solid black; */
+        margin-top: 80px;
+
+        li {
+            a {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: white;
+                display: block;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            &.active {
+                width: 30px;
+                height: 30px;
+
+            }
+
+            &:hover {
+                color: burlywood;
+            }
+        }
+    }
+}

@@ -14,6 +14,22 @@
   left: 0;
   width: 100vw;
   z-index: 10000;
+  transition: $transition-time;
+
+  &.headerActive {
+    background-color: $main-theme-white;
+    color: $main-theme-dark;
+
+    a {
+      color: $main-theme-dark;
+      text-decoration: none;
+      opacity: $text-font-opacity;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 
   ul {
     display: flex;
@@ -33,6 +49,7 @@
         &:hover {
           opacity: 1;
         }
+
       }
     }
   }

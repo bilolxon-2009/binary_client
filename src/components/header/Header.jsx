@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./Header.module.scss";
 import logo from "../../essets/logo.svg"
 // Please use CSS module
 
 const Header = () => {
+  const [scrollState, setScrollState] = useState(0)
+
+  const ScrollFunc = () => {
+    setScrollState(window.scrollY)
+  }
+
+  window.addEventListener("scroll", ScrollFunc)
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} ${scrollState > 50 ? styles.headerActive : ""}`} >
       <div className={styles.logo}>
         <img src={logo} alt="" />
         <h1>BINARY</h1>
