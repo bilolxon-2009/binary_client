@@ -10,7 +10,7 @@ const Accordion = ({ title, content }) => {
         <div>{title}</div>
         <div>{isActive ? '-' : '+'}</div>
       </div>
-      {isActive && <h3 className={style.accordion__content}>{content}</h3>}
+      {isActive && <p className='accordion__content'>{content}</p>}
       <div className={style.line}></div>
     </div>
   );

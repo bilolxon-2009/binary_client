@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Faq.module.scss";
-import Accordion from './accordion/Accodion';
+import Accordion from './accordion/Accordion';
 import accordionData from './accordion/AccordionData.json';
 function Faq() {
     return (
@@ -13,8 +13,6 @@ function Faq() {
                     ))}
                 </div>
             </div>
-
-            {/* ichiga spanni qo`shdim */}
             <button className='btns'><span>Оставить заявку</span></button>
         </div>
     );
