@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Faq.module.scss";
-import Accordion from './accordion/Accodion';
+import Accordion from './accordion/Accordion';
 import accordionData from './accordion/AccordionData.json';
 function Faq() {
     return (
