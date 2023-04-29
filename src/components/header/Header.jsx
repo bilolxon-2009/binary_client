@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from "./Header.module.scss";
-import logo from "../../essets/logo.svg"
+import logo from "../../assets/logo.svg"
 // Please use CSS module
 
 const Header = () => {
