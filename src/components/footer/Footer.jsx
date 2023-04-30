@@ -1,6 +1,8 @@
 import React from 'react';
 import style from "./Footer.module.scss";
 import office from "../../essets/🏢.webp";
+import man from "../../essets/👨🏻‍💼.png";
+import stars from "../../essets/✨.png";
 // Please use CSS module
 
 const Footer = () => {
@@ -63,9 +65,10 @@ const Footer = () => {
           </div>
         </div>
         <div className={style.footer__conclusion}>
-          Начните воплощать мечту ✨
+          Начните воплощать мечту <img className={style.conclusion_starts} src={stars} alt="" />
           <br />
-          в реальность 👨🏻‍💼 вместе с нами
+          в реальность <img className={style.conclusion_man} src={man} alt="" /> в
+          месте с нами
         </div>
         <div className={style.footer__c2_right}>
           <div className={style.footer__c2_right_in}>
