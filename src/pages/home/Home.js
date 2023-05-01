@@ -7,7 +7,7 @@ import Video from '../../components/video/Video';
 import Case from '../../components/case/Case';
 import Team from '../../components/team/Team';
 import Faq from '../../components/faq/Faq';
-import ScrollRoute from '../../components/scrollroute/ScrollRoute';
+import ScrollRoute from '../../components/scrollRoute/ScrollRoute';
 function Home() {
     return (
         <div style={styles}>
