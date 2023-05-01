@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import style from './Accordion.module.scss'
+import './Accordion.scss'
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={style.accordion__item}>
-      <div className={style.accordion__title} onClick={() => setIsActive(!isActive)}>
+    <div className='accordion__item'>
+      <div className='accordion__title' onClick={() => setIsActive(!isActive)}>
         <div>{title}</div>
         <div>{isActive ? '-' : '+'}</div>
       </div>
-      {isActive && <p className='accordion__content'>{content}</p>}
-      <div className={style.line}></div>
+      <div className={`answer__wrapper ${isActive ? "open" : "" }`}>
+        <div className='answer'>{content}</div>
+      </div>
+      <div className='line'></div>
     </div>
   );
 };

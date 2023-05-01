@@ -15,3 +15,11 @@
     width: 100%;
     border: 1px solid #ffffff80;
 }
+.answer__wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: 0.3s ease-in-out;
+}
+.answer__wrapper.open {
+    height: 100px;
+}
