@@ -3,7 +3,6 @@ import style from "./Footer.module.scss";
 import office from "../../essets/🏢.webp";
 import man from "../../essets/👨🏻‍💼.png";
 import stars from "../../essets/✨.png";
-// Please use CSS module
 
 const Footer = () => {
   return (
