@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.swiper {
+    width: 420px;
+    height: 250px;
+    position: absolute;
+    margin-top: 60px;
+    cursor: pointer;
+  }
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    text-align: start;
+    font-size: 32px;
+    opacity: 0.5;
+    font-weight: 500px;
+}
+.swiper-slide:hover{
+    opacity: 1;
+}
+.swiper__wrapper{
+    position: relative;
+}  
+.line{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ffffff80;
+}
