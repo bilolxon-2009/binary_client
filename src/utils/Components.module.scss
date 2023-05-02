@@ -1,0 +1,11 @@
+@import "../variables";
+
+.mainInput{
+    border: none;
+    border-bottom: 1px solid rgb(189, 186, 186);
+    outline: none;
+    background-color: $main-theme-f2;
+    height: 35px;
+    width: 320px;
+}
+
