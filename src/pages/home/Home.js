@@ -8,6 +8,7 @@ import Case from '../../components/case/Case';
 import Team from '../../components/team/Team';
 import Faq from '../../components/faq/Faq';
 import ScrollRoute from '../../components/scrollRoute/ScrollRoute';
+import PopUp from '../../components/popUp/PopUp';
 function Home() {
     return (
         <div style={styles}>
@@ -19,6 +20,7 @@ function Home() {
             <Team />
             <Faq />
             <Footer />
+            <PopUp />
         </div>
     )
 }
