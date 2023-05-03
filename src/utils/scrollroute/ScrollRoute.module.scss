@@ -1,0 +1,68 @@
+.rounds {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    // background-color: dodgerblue;
+    position: absolute;
+    top: 45%;
+    align-items: center;
+    right: 50px;
+    // overflow: hidden;
+    z-index: 1000;
+
+
+    // .line1 {
+    //     width: 20px;
+    //     height: 3px;
+    //     background-color: white;
+    //     position: absolute;
+    //     left: 0;
+    // }
+
+    &>ul {
+        display: flex;
+        place-items: center;
+        flex-direction: column;
+        transition: 0.3s;
+        /* height: 50%; */
+        /* border: 2px solid black; */
+        // margin-top: 80px;
+
+        li {
+            a {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: red;
+                display: block;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            & .active {
+                border: 1px solid red;
+                // outline: 1px solid red;
+                width: 12px;
+                height: 12px;
+                background-color: transparent;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background: red;
+                    border-radius: 50%;
+                }
+            }
+
+
+        }
+    }
+}

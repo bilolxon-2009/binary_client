@@ -9,6 +9,27 @@
   align-items: center;
   justify-content: space-between;
   height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10000;
+  transition: $transition-time;
+
+  &.headerActive {
+    background-color: $main-theme-white;
+    color: $main-theme-dark;
+
+    a {
+      color: $main-theme-dark;
+      text-decoration: none;
+      opacity: $text-font-opacity;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 
   ul {
     display: flex;
@@ -16,6 +37,7 @@
     width: 30%;
     // border: 2px solid white;
     justify-content: space-between;
+    margin-right: 200px;
 
     li {
 
@@ -27,6 +49,7 @@
         &:hover {
           opacity: 1;
         }
+
       }
     }
   }

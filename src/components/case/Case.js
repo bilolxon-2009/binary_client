@@ -8,7 +8,6 @@ import "swiper/css";
 import "./styles.scss";
 import data from './swiperData.json'
 import medals from '../../essets/medals.svg'
-
 function Case() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
