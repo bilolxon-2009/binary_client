@@ -39,7 +39,7 @@ function ScrollRoute({ routeName }) {
         }
     ];
 
-    console.log(navData.slice(3, 6))
+    // console.log(navData.slice(3, 6))
     useEffect(() => {
         if (routeName === "banner") {
             setNavRoute(navData.slice(0, 4))

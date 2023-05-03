@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Link = ({text, icon, link}) => {
+const Link = ({ text, icon, link }) => {
   return (
-    <Link to={link}>
+    <Link className="btns" to={link}>
       <span>{text}</span>
       {icon}
     </Link>

@@ -3,10 +3,11 @@ import style from "./Footer.module.scss";
 import office from "../../essets/🏢.webp";
 import man from "../../essets/👨🏻‍💼.png";
 import stars from "../../essets/✨.png";
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <div className={style.footer} id='footer'>
       <div className={style.footer__container}>
         <h1>Мы расположены <img src={office} alt="" /></h1>
         <div className={style.branches}>
@@ -46,15 +47,15 @@ const Footer = () => {
           <div className={style.footer__c2_left_in}>
             <span>0101101011010101101</span>
             <br />
-            <span style={{"opacity": '55%'}}>110010101010101</span>
+            <span style={{ "opacity": '55%' }}>110010101010101</span>
             <br />
-            <span style={{"opacity": '40%'}}>01100101011011001101101010</span>
+            <span style={{ "opacity": '40%' }}>01100101011011001101101010</span>
             <br />
-            <span style={{"opacity": '55%'}}>1100101010101</span>
+            <span style={{ "opacity": '55%' }}>1100101010101</span>
             <br />
             <span>01100101011010101001101</span>
             <br />
-            <span style={{"opacity": '40%'}}>110010011001010110</span>
+            <span style={{ "opacity": '40%' }}>110010011001010110</span>
             <br />
             <span>11001011001101010101</span>
             <br />
@@ -74,15 +75,15 @@ const Footer = () => {
             <br />
             <span> 0101101011010101101</span>
             <br />
-            <span style={{"opacity": '55%'}}> 110010101010101</span>
+            <span style={{ "opacity": '55%' }}> 110010101010101</span>
             <br />
-            <span style={{"opacity": '40%'}}> 01100101011011001101101010</span>
+            <span style={{ "opacity": '40%' }}> 01100101011011001101101010</span>
             <br />
-            <span style={{"opacity": '55%'}}> 1100101010101</span>
+            <span style={{ "opacity": '55%' }}> 1100101010101</span>
             <br />
             <span> 01100101011010101001101</span>
             <br />
-            <span style={{"opacity": '40%'}}> 110010011001010110</span>
+            <span style={{ "opacity": '40%' }}> 110010011001010110</span>
             <br />
             <span>11001011001101010101</span>
             <br />
@@ -92,6 +93,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <ScrollRoute />
     </div>
   )
 }

@@ -12,7 +12,7 @@ const Header = () => {
 
   window.addEventListener("scroll", ScrollFunc)
   return (
-    <div className={`${styles.header} ${scrollState > 50 ? styles.headerActive : ""}`} >
+    <div className={`${styles.header} `} >
       <div className={styles.logo}>
         <img src={logo} alt="" />
         <h1>BINARY</h1>

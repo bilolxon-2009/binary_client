@@ -1,5 +1,8 @@
 @import "reset";
 @import "./variables";
+@import "./font";
+
+
 
 .btns {
     color: #fff;
@@ -12,6 +15,7 @@
     display: flex;
     transform: skew(-21deg);
     align-items: center;
+    width: auto;
 
     span {
         display: inline-block;
