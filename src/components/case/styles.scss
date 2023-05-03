@@ -1,0 +1,41 @@
+@import "../../variables";
+
+.swiper {
+    width: 420px;
+    height: 250px;
+    position: absolute;
+    margin-top: 60px;
+    cursor: pointer;
+  }
+  
+.swiper-slide {
+    font-size: 18px;
+    font-size: 32px;
+    opacity: 0.5;
+    font-weight: 500px;
+}
+.swiper-slide:hover{
+    opacity: 1;
+}
+.swiper__wrapper{
+    position: relative;
+    display: flex;
+    h2{
+        position: absolute;
+        right: 0;
+    }
+}  
+.line{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ffffff80;
+}
+.active{
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 78px 0;
+    max-width: 505px;
+    text-align: center;
+    margin-right: 105px;
+}
