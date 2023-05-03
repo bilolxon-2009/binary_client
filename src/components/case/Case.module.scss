@@ -7,6 +7,12 @@
     box-sizing: border-box;
     color: $main-text-color;
     padding: 97px 130px;
+    position: relative;
+    button{
+        left: 60%;
+        bottom: 97px;
+        position: absolute;
+    }
 }
 .title{
     font-size: 32px;
@@ -16,4 +22,5 @@
         width: 28px;
     }
 }
+
 
