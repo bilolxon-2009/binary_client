@@ -1,5 +1,8 @@
 @import "reset";
 @import "./variables";
+@import "./font";
+
+
 
 .btns {
     text-decoration: none;
@@ -14,6 +17,7 @@
     transform: skew(-21deg);
     align-items: center;
     transition: 0.5s;
+    width: auto;
 
     span {
         display: inline-block;
@@ -26,12 +30,14 @@
         transform: skew(21deg);
 
     }
-    &:active{
+
+    &:active {
         border-radius: 40px;
         transition: 0.5s;
+
         span {
-        transition: 0.5s;
-       color: rgba(212, 212, 212, 0.63);
-    }
+            transition: 0.5s;
+            color: rgba(212, 212, 212, 0.63);
+        }
     }
 }
