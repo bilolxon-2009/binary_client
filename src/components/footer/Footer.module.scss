@@ -43,6 +43,7 @@ $in-w: $n-char*($char-w + $gap);
             position: relative;
 
             .numberInput {
+                position: relative;
                 font-size: 30px !important;
                 display: block;
                 margin: 0 auto;
@@ -64,7 +65,7 @@ $in-w: $n-char*($char-w + $gap);
         .numberCode{
             position: absolute !important;
             top: 165px;
-            font-size: 28px;
+            font-size: 30px;
             }
 
             
