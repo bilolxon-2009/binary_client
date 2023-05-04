@@ -16,7 +16,7 @@
         // background-color: gray;
 
         .team_left {
-            width: 40%;
+            width: 45%;
             // border: 2px solid red;
             margin-bottom: 60px;
 
@@ -24,6 +24,7 @@
             .team_dev {
                 display: flex;
                 margin-bottom: 30px;
+
 
                 .team_dev_img {
                     width: 92px;
@@ -35,15 +36,20 @@
                 .team_dev_name {
                     margin-right: 30px;
                     line-height: 30px;
+                    width: 60%;
                     color: $main-theme-dark;
+                    // border: 2px solid red;
+                    font-family: $font-sfpro-light;
 
                     h1 {
                         font-size: 32px;
+                        font-family: $font-sfpro-bold;
                     }
 
                     span {
                         font-size: 18px;
                         opacity: 0.6;
+                        font-family: $font-sfpro-light;
 
                     }
 
@@ -52,7 +58,6 @@
                 .team_dev_icons {
                     width: 32px;
                     height: 32px;
-                    // border: 2px solid red;
                 }
             }
 
@@ -62,8 +67,10 @@
                 color: $main-theme-dark;
                 letter-spacing: 2%;
                 line-height: 26px;
-                width: 350px;
+                width: 75%;
+                height: 180px;
                 margin-bottom: 85px;
+                font-family: $font-sfpro-light;
             }
 
             .team_left_devs {
@@ -150,7 +157,6 @@
                 'main right right right right right'
                 'footer footer footer blog blog blog';
             grid-template-rows: 107px 80px 136px 100;
-            // background-color: #2196F3;
 
             .team_right_item1 {
                 grid-area: header;
@@ -198,7 +204,7 @@
             .team_right_item5 {
                 grid-area: footer;
                 // border: 2px solid red;
-                font-family: 'SF Pro';
+                font-family: $font-sfpro-bold;
                 font-style: normal;
                 font-weight: 650;
                 font-size: 32px;
@@ -239,7 +245,7 @@
         }
 
         p {
-            font-family: 'Montserrat';
+            font-family: $font-sfpro-light;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;

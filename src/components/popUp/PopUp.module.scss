@@ -15,7 +15,7 @@ $in-w: $n-char*($char-w + $gap);
     background-color: $main-theme-f2;
     padding: $padding-container;
     padding-top: 97px;
-    font-family: $font-family;
+    font-family: $font-sfpro-bold;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@ $in-w: $n-char*($char-w + $gap);
         gap: 60px;
         flex-wrap: wrap;
         flex: 1;
+
         .formNameTaker {
             display: flex;
             flex-direction: column;
@@ -65,69 +66,77 @@ $in-w: $n-char*($char-w + $gap);
                 }
             }
         }
-        .numberCode{
+
+        .numberCode {
             position: absolute !important;
             top: 165px;
             font-size: 30px;
+        }
+
+
+        .radioTaker {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            textarea {
+                background-color: $main-theme-f2;
+                border: none;
+                font-size: 16px;
+                width: 320px;
+                border-bottom: 1px solid rgb(189, 186, 186);
+                outline: none;
+                height: 32px;
+                margin-bottom: 25px;
             }
 
-            
-            .radioTaker{
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                textarea {
-                    background-color: $main-theme-f2;
-                    border: none;
-                    font-size: 16px;
-                    width: 320px;
-                    border-bottom: 1px solid rgb(189, 186, 186);
-                    outline: none;
-                    height: 32px;
-                    margin-bottom: 25px;
-                }
             label {
                 color: gray;
-    
+
                 &:hover {
                     color: black;
                 }
             }
         }
     }
-    .buttonElement{
+
+    .buttonElement {
         margin-left: 50%;
         margin-bottom: 150px;
     }
-   .popUpNavbar{
-    height: 60px;
-    display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-       ul {
-           display: flex;
-           list-style: none;
-           width: 30%;
-           // border: 2px solid white;
-           gap: 95px;
-           li {
-       
-             a {
-               color: $main-theme-dark;
-               text-decoration: none;
-               opacity: $text-font-opacity;
-               transition: .5s;
-       
-               &:hover {
-                 opacity: 1;
-                 transition: .5s;
-               }
-       
-             }
-           }
-         }
-         img{
+
+    .popUpNavbar {
+        height: 60px;
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+
+        ul {
+            display: flex;
+            list-style: none;
+            width: 30%;
+            // border: 2px solid white;
+            gap: 95px;
+
+            li {
+
+                a {
+                    color: $main-theme-dark;
+                    text-decoration: none;
+                    opacity: $text-font-opacity;
+                    transition: .5s;
+
+                    &:hover {
+                        opacity: 1;
+                        transition: .5s;
+                    }
+
+                }
+            }
+        }
+
+        img {
             margin-left: auto;
-         }
-   }
+        }
+    }
 }
