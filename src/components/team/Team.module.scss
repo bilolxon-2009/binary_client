@@ -6,7 +6,7 @@
     border: 2px solid blue;
     box-sizing: border-box;
     position: relative;
-    background-color: $main-theme-gray;
+    background-color: $main-theme-white;
     padding: $padding-container;
     padding-top: 90px;
 
@@ -35,7 +35,7 @@
                 .team_dev_name {
                     margin-right: 30px;
                     line-height: 30px;
-                    color: white;
+                    color: $main-theme-dark;
 
                     h1 {
                         font-size: 32px;
@@ -59,7 +59,7 @@
             .dev_text {
                 font-weight: 400;
                 font-size: 24px;
-                color: white;
+                color: $main-theme-dark;
                 letter-spacing: 2%;
                 line-height: 26px;
                 width: 350px;
@@ -87,19 +87,49 @@
 
                     .team_dev_tooltip {
                         transform: scale(0);
+                        opacity: 0;
                         transition: .3s;
                         transform-origin: left top;
+                        position: relative;
+                        color: $main-theme-white;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            position: absolute;
+                            right: 50px;
+                            transform: skew(21deg)
+                        }
+
+                        h1 {
+                            right: 130px;
+                            position: absolute;
+                            top: 10px;
+                            transform: skew(21deg)
+                        }
+
+                        p {
+                            position: absolute;
+                            font-size: 11px;
+                            bottom: 10px;
+                            right: 130px;
+                            opacity: .6;
+                            transform: skew(21deg)
+                        }
                     }
 
                     &:hover {
-                        background-color: red;
+                        background-color: $main-theme-gray;
                         transform: translateY(-10px);
 
                         .team_dev_tooltip {
                             position: absolute;
-                            width: 200px;
+                            min-width: 250px;
+                            padding-left: 30px;
                             height: 50px;
-                            background-color: black;
+                            background-color: $main-theme-dark;
+                            opacity: 1;
                             transform: scale(1)skew(-21deg) translateX(55px) translateY(-50px);
 
 
@@ -178,10 +208,11 @@
                 align-items: center;
                 height: 107px;
                 text-align: center;
-                color: white;
+                color: $main-theme-dark;
                 border-width: 0px 1px 1px 1px;
                 border-style: solid;
-                border-color: #FFFFFF;
+                border-color: $main-theme-dark;
+                ;
             }
 
             .team_right_item6 {
@@ -190,7 +221,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: white;
+                background-color: $main-theme-dark;
+                ;
             }
 
         }

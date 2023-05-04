@@ -3,7 +3,6 @@ import { Link } from 'react-scroll'
 import style from "./ScrollRoute.module.scss"
 
 function ScrollRoute({ routeName }) {
-    const [move, setMove] = useState(20)
     const [navRoute, setNavRoute] = useState([])
     const [navIndex, setNavIndex] = useState(0)
     const navData = [
@@ -69,18 +68,17 @@ function ScrollRoute({ routeName }) {
 
     return (
         <div className={style.rounds}>
-            <div className="line1"></div>
-            <ul style={{ transform: `translateY(${move}px)` }}>
+            <ul >
                 {navRoute?.map((nav, inx) => (
                     <li key={inx} >
-                        <Link className={inx === navIndex ? style.active : ""} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
+                        <Link className={inx === navIndex ? style.activeclass : ""} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
 
                         </Link>
                     </li>
                 ))}
             </ul>
 
-        </div>
+        </div >
     )
 }
 

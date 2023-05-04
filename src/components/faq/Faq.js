@@ -4,6 +4,7 @@ import Accordion from './accordion/Accordion';
 import accordionData from './accordion/AccordionData.json';
 import message from '../../essets/message.svg'
 import finger from '../../essets/finger.svg'
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 
 function Faq() {
     return (
@@ -17,6 +18,7 @@ function Faq() {
                 </div>
             </div>
             <button className='btns'><span>Оставить заявку</span><img src={message} alt='Message' /></button>
+            <ScrollRoute routeName={"faq"} />
         </div>
     );
 }

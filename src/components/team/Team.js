@@ -43,6 +43,11 @@ function Team() {
                         {team_data.map(data => (
                             <div className={`${style.team_dev_avatar} ${data.id === selectedData.id ? style.devs_selected : ""}`} onClick={() => selectDev(data.id)} >
                                 <div className={style.team_dev_tooltip}>
+                                    <div className={style.team_dev_tooltip_text}>
+                                        <h1>{data.name}</h1>
+                                        <p>{data.role}</p>
+                                    </div>
+                                    <img src={artist} alt="" />
                                 </div>
                                 <img src={data.avatar} alt="" />
                             </div>

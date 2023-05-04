@@ -8,10 +8,11 @@ import "swiper/css";
 import "./styles.scss";
 import data from './swiperData.json'
 import medals from '../../essets/medals.svg'
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 function Case() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
-        <div className={style.case}>
+        <div className={style.case} id='case'>
             <h2 className={style.title}>Мы выросли из компании семейного <img src={family} alt="family" /> типа в 🏙️ компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2>
             <div className='swiper__wrapper'>
                 <Swiper
@@ -50,6 +51,8 @@ function Case() {
                 </div>
             </div>
             <button className='btns'><span>О команде</span><img src={medals} alt='Medals' /></button>
+
+            <ScrollRoute routeName={"case"} />
         </div>
     )
 }

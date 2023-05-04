@@ -2,9 +2,8 @@
 @import "./variables";
 @import "./font";
 
-
-
 .btns {
+    text-decoration: none;
     color: #fff;
     background: $secondary-theme-dark;
     font-family: $font-family;
@@ -15,16 +14,28 @@
     display: flex;
     transform: skew(-21deg);
     align-items: center;
+    transition: 0.5s;
     width: auto;
 
     span {
         display: inline-block;
         transform: skew(21deg);
+        transition: 0.5s;
         margin-right: 16px;
     }
 
     img {
         transform: skew(21deg);
 
+    }
+
+    &:active {
+        border-radius: 40px;
+        transition: 0.5s;
+
+        span {
+            transition: 0.5s;
+            color: rgba(212, 212, 212, 0.63);
+        }
     }
 }

@@ -7,6 +7,7 @@ import Video from '../../components/video/Video';
 import Case from '../../components/case/Case';
 import Team from '../../components/team/Team';
 import Faq from '../../components/faq/Faq';
+import PopUp from '../../components/popUp/PopUp';
 
 function Home() {
     return (
@@ -18,6 +19,7 @@ function Home() {
             <Team />
             <Faq />
             <Footer />
+            <PopUp />
         </div>
     )
 }
