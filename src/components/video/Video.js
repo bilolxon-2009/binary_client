@@ -4,7 +4,7 @@ import ReactPlayer from "react-player"
 import backgroundVideo from "../../essets/bgVideo.mp4"
 import suitcase from "../../essets/suitcase.svg"
 import smilyIcon from "../../essets/smile.svg"
-import man from "../../essets/man.png"
+import man from "../../essets/man.svg"
 import { MainLink } from '../../utils/Components'
 import Scrollroute from '../../utils/scrollroute/Scrollroute'
 
