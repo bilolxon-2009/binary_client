@@ -7,16 +7,15 @@
     font-family: $font-sfpro-bold;
     box-sizing: border-box;
     color: $main-text-color;
-    padding: 150px 130px 0 130px;
+    padding: 152px 130px 0 130px;
     position: relative;
 
     .faq__child {
         display: flex;
         justify-content: space-between;
         gap: 50px;
-
         h2 {
-            max-width: 350px;
+            max-width: 420px;
             font-size: 32px;
             font-weight: 500;
             line-height: 32px;
@@ -35,11 +34,18 @@
 }
 
 .accordion {
+    font-family: $font-sfpro-regular;
     cursor: pointer;
+    overflow-y: scroll;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    height: 246px;
     width: 420px;
+}
+.accordion::-webkit-scrollbar{
+    display: none;
 }
 
 

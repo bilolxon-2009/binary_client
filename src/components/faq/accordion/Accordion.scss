@@ -1,13 +1,9 @@
-@import "../../../variables";
 
 .accordion__title{
     display: flex;
     justify-content: space-between;
     gap: 68px;
-    margin-bottom: 10px;
     font-size: 24px;
-    font-weight: 400px;
-    line-height: 29px;
     letter-spacing: 0.02em;
 }
 .line{
@@ -21,5 +17,5 @@
     transition: 0.3s ease-in-out;
 }
 .answer__wrapper.open {
-    height: 100px;
+    height: 70px;
 }
