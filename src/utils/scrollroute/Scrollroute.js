@@ -5,6 +5,7 @@ import style from "./ScrollRoute.module.scss"
 function ScrollRoute({ routeName }) {
     const [navRoute, setNavRoute] = useState([])
     const [navIndex, setNavIndex] = useState(0)
+    const [color, setColor] = useState("")
     const navData = [
         {
             id: 1,
@@ -54,6 +55,7 @@ function ScrollRoute({ routeName }) {
         if (routeName === "team") {
             setNavRoute(navData.slice(2, 6))
             setNavIndex(1)
+            setColor("black")
         }
         if (routeName === "faq") {
             setNavRoute(navData.slice(2, 6))
@@ -71,7 +73,7 @@ function ScrollRoute({ routeName }) {
             <ul >
                 {navRoute?.map((nav, inx) => (
                     <li key={inx} >
-                        <Link className={inx === navIndex ? style.activeclass : ""} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
+                        <Link style={{ backgroundColor: color, border: color }} className={`${inx === navIndex ? style.activeclass : ""} ${style.bgColorWhite}`} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
 
                         </Link>
                     </li>

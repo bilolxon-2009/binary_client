@@ -96,6 +96,7 @@ const Footer = () => {
           </div>
         </div>
         <ScrollRoute routeName={"footer"} />
+
       </div>
 
     </div>
