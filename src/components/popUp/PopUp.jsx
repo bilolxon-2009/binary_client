@@ -1,16 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import style from "./PopUp.module.scss"
 import hugging from "../../essets/hugging.svg"
 import man from "../../essets/man.svg"
 import stars from "../../essets/stars.svg"
 import messageBox from "../../essets/messageBox.svg"
 import { MainInput, CustomRadio, MainLink } from '../../utils/Components';
-import { FiXCircle } from "react-icons/fi"
+import xIcon from "../../essets/xButton.svg"
 
 // Please use CSS module
 
 const PopUp = () => {
-  const anchor = useRef(null);
   const [show, setShow] = useState(true);
   const hidePopupWindow = () => {
     setShow(!show);
@@ -20,8 +19,7 @@ const PopUp = () => {
     <div className={style.popUpLayer} >
       <div className={style.popUpHideLayer} onClick={hidePopupWindow}></div>
       <div className={style.popUp} id='popUp'>
-        <FiXCircle className={style.backButton} onClick={hidePopupWindow}
-          ref={anchor} />
+        <img src={xIcon} className={style.backButton} onClick={hidePopupWindow}/>
         <h2 className={style.text}>Начните воплощать мечту <img src={stars} alt="" />
           в реальность <img src={man} alt="" /> вместе с нами <img src={hugging} alt="" /></h2>
         <form action="#">

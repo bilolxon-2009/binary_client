@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     max-height: 100vh;
+    aspect-ratio: 100vw/100vh;
     box-sizing: border-box;
     overflow: hidden;
     font-family: $font-sfpro-light;

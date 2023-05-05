@@ -12,3 +12,14 @@
     }
 }
 
+@media only screen and (max-width:660px) {
+  .mainInput{
+    width: 120%;
+  }
+}
+@media only screen and (max-width:475px) {
+    .mainInput{
+      width: 80%;
+    }
+  }
+
