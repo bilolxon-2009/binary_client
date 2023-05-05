@@ -5,6 +5,7 @@ import man from "../../essets/👨🏻‍💼.png";
 import stars from "../../essets/✨.png";
 
 const Footer = () => {
+  
   return (
     <div className={style.footer}>
       <div className={style.footer__container}>
