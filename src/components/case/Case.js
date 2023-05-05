@@ -6,14 +6,15 @@ import "swiper/css/free-mode";
 import { Mousewheel } from "swiper";
 import "swiper/css";
 import "./styles.scss";
-import data from './swiperData.json'
+import data from './data/images/swiperData.json'
 import medals from '../../essets/medals.svg'
+import house from '../../assets/house.svg'
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 function Case() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
         <div className={style.case} id='case'>
-            <h2 className={style.title}>Мы выросли из компании семейного <img src={family} alt="family" /> типа в 🏙️ компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2>
+            <h2 className={style.title}>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2>
             <div className='swiper__wrapper'>
                 <Swiper
                     slidesPerView={4}
@@ -44,7 +45,7 @@ function Case() {
                 <div className='active__wrapper'>
                     {
                         data ?
-                            <h2 className='active'>{data[activeTextIndex].name}</h2>
+                            <img className='active__img' src={data[activeTextIndex].image} alt="" />
                             :
                             <></>
                     }

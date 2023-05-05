@@ -6,10 +6,10 @@
     position: absolute;
     margin-top: 60px;
     cursor: pointer;
+    font-family: $font-sfpro-regular;
 }
 
 .swiper-slide {
-    font-size: 18px;
     font-size: 32px;
     opacity: 0.5;
     font-weight: 500px;
@@ -26,16 +26,6 @@
     h2 {
         position: absolute;
         right: 0;
-    }
-
-    .active {
-        font-size: 80px;
-        text-transform: uppercase;
-        font-weight: 900;
-        padding: 78px 0;
-        max-width: 505px;
-        text-align: center;
-        margin-right: 105px;
     }
 }
 
