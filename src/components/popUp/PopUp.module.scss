@@ -4,13 +4,30 @@ $gap: .2*$char-w;
 $n-char: 9;
 $in-w: $n-char*($char-w + $gap);
 
-
-.popUp {
+.popUpLayer{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.459);
+    z-index: 1;
+    .popUpHideLayer{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.popUp {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64%;
+    min-height: 70%;
     box-sizing: border-box;
     background-color: $main-theme-f2;
     padding: $padding-container;
@@ -20,7 +37,14 @@ $in-w: $n-char*($char-w + $gap);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    position: relative;
+.backButton{
+    position: absolute;
+    top: -50px;
+    right: 15px;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
     .text {
         font-weight: 650;
         font-size: 42px;
@@ -47,25 +71,19 @@ $in-w: $n-char*($char-w + $gap);
             position: relative;
 
             .numberInput {
-                position: relative;
                 font-size: 30px !important;
                 display: block;
-                margin: 0 auto;
                 border: none;
+                outline: none;
                 padding: 0;
                 width: $in-w;
                 background: repeating-linear-gradient(90deg,
                     dimgrey 0, dimgrey $char-w,
                     transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
-                font: 5ch droid sans mono, consolas, monospace;
                 letter-spacing: $gap;
-
-                &:focus {
-                    outline: none;
-                    color: rgb(12, 12, 12);
-                }
             }
         }
+<<<<<<< HEAD
 
         .numberCode {
             position: absolute !important;
@@ -93,12 +111,48 @@ $in-w: $n-char*($char-w + $gap);
             label {
                 color: gray;
 
-                &:hover {
-                    color: black;
+=======
+        .numberCode{
+            display: flex;
+            max-width: 320px;
+            align-items: center;
+            h3{
+            font-size: 30px;
+            margin-right: 5px;
+            }
+            }
+            .radioTaker{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                textarea {
+                    background-color: $main-theme-f2;
+                    border: none;
+                    font-size: 16px;
+                    width: 320px;
+                    border-bottom: 1px solid rgb(189, 186, 186);
+                    outline: none;
+                    height: 33px;
+                    margin-bottom: 25px;
+                    resize: vertical;
+                    max-height: 80px;
+                    min-height: 33px;
+                    &:focus {
+                    border-bottom: 1px solid rgb(12, 12, 12);
+                    }
                 }
+            label {
+                color: rgb(0, 0, 0);
+    
+>>>>>>> origin/ismoil_md
+                &:hover {
+                    color: rgb(136, 136, 136);
+                }
+               
             }
         }
     }
+<<<<<<< HEAD
 
     .buttonElement {
         margin-left: 50%;
@@ -139,4 +193,10 @@ $in-w: $n-char*($char-w + $gap);
             margin-left: auto;
         }
     }
+=======
+    .buttonElement{
+        margin-left: auto;
+        margin-bottom: 50px;
+    }
+>>>>>>> origin/ismoil_md
 }
