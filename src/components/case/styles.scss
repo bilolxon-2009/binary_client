@@ -21,11 +21,17 @@
 
 .swiper__wrapper {
     position: relative;
-    display: flex;
-
-    h2 {
-        position: absolute;
-        right: 0;
+}
+.active__img__wrapper{
+    max-width: 505px;
+    height: 320px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 5%;
+    img{
+        width: 100%;
+        height: 164px;
     }
 }
 
