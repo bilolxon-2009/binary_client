@@ -5,7 +5,7 @@ import style from "./ScrollRoute.module.scss"
 function ScrollRoute({ routeName }) {
     const [navRoute, setNavRoute] = useState([])
     const [navIndex, setNavIndex] = useState(0)
-    const [color, setColor] = useState("")
+    const [color, setColor] = useState(false)
     const navData = [
         {
             id: 1,
@@ -42,30 +42,32 @@ function ScrollRoute({ routeName }) {
     // console.log(navData.slice(3, 6))
     useEffect(() => {
         if (routeName === "banner") {
-            setNavRoute(navData.slice(0, 4))
+            setNavRoute(navData.slice(0, 3))
             setNavIndex(0)
         } if (routeName === "video") {
-            setNavRoute(navData.slice(0, 4))
+            setNavRoute(navData.slice(0, 3))
             setNavIndex(1)
+
         }
         if (routeName === "case") {
-            setNavRoute(navData.slice(1, 5))
+            setNavRoute(navData.slice(1, 4))
             setNavIndex(1)
         }
         if (routeName === "team") {
-            setNavRoute(navData.slice(2, 6))
+            setNavRoute(navData.slice(2, 5))
             setNavIndex(1)
             setColor("black")
         }
         if (routeName === "faq") {
-            setNavRoute(navData.slice(2, 6))
-            setNavIndex(2)
+            setNavRoute(navData.slice(3, 6))
+            setNavIndex(1)
         }
         if (routeName === "footer") {
-            setNavRoute(navData.slice(2, 6))
-            setNavIndex(3)
+            setNavRoute(navData.slice(3, 6))
+            setNavIndex(2)
+            setColor("black")
         }
-    }, [routeName])
+    }, [routeName, navData])
 
 
     return (
@@ -73,7 +75,7 @@ function ScrollRoute({ routeName }) {
             <ul >
                 {navRoute?.map((nav, inx) => (
                     <li key={inx} >
-                        <Link style={{ backgroundColor: color, border: color }} className={`${inx === navIndex ? style.activeclass : ""} ${style.bgColorWhite}`} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
+                        <Link style={(inx === navIndex && color) ? { border: "1px solid black" } : ""} className={`${inx === navIndex ? style.activeclass : ""} ${color ? style.bgColorWhite : ""}`} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
 
                         </Link>
                     </li>
