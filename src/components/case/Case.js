@@ -15,6 +15,7 @@ import alastin from '../../assets/alastin.svg'
 import mold from '../../assets/mold.svg'
 import geeni from '../../assets/geeni.svg'
 import euro from '../../assets/euro.svg'
+import beauty from '../../assets/beauty.svg'
 
 const data = [
     {
@@ -46,7 +47,7 @@ const data = [
     {
         "id": 6,
         "name": "Beautyrest",
-        "image":"images/.png"
+        "image": beauty
     },
     {
         "id": 7,
