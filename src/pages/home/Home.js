@@ -12,7 +12,7 @@ import PopUp from '../../components/popUp/PopUp';
 function Home() {
     return (
         <div style={styles}>
-            <Header />
+            {/* <Header /> */}
             <Banner />
             <Video />
             <Case />

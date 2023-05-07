@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from "./Header.module.scss";
 import logo from "../../assets/logo.svg"
+import { Link } from 'react-router-dom';
 // Please use CSS module
 
 const Header = () => {
@@ -20,24 +21,24 @@ const Header = () => {
 
       <ul>
         <li>
-          <a href="#">
+          <Link to={"/"}>
             О нас
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to={"case"}>
             Кейсы
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to={"#"}>
             Услуги
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to={"#"}>
             Контакты
-          </a>
+          </Link>
         </li>
 
       </ul>
