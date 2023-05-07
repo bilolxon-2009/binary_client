@@ -7,16 +7,15 @@
     font-family: $font-sfpro-bold;
     box-sizing: border-box;
     color: $main-text-color;
-    padding: 152px 130px 0 130px;
+    padding: 152px 130px 60px 130px;
     position: relative;
 
     .faq__child {
         display: flex;
         justify-content: space-between;
         gap: 50px;
-
         h2 {
-            max-width: 420px;
+            max-width: 500px;
             font-size: 32px;
             font-weight: 500;
             line-height: 32px;
@@ -30,7 +29,6 @@
     button {
         position: absolute;
         bottom: 60px;
-        right: 40%;
     }
 }
 
@@ -44,8 +42,6 @@
     gap: 30px;
     min-height: 246px;
     width: 420px;
-    border: 2px solid white;
-
 }
 
 .accordion::-webkit-scrollbar {
