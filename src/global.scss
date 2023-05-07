@@ -39,3 +39,25 @@
         }
     }
 }
+
+@media only screen and (max-width:660px) {
+    .btns{
+        font-size: 18px;
+        padding: 10px 22px;
+    
+        span {
+            margin-right: 12px;
+        }
+    }
+  }
+  @media only screen and (max-width:475px) {
+      .btns{
+        font-size: 16px;
+        padding: 8px 16px;
+    
+        span {
+            margin-right: 8px;
+        }
+      }
+    }
+  

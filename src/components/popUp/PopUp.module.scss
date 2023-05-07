@@ -43,10 +43,13 @@ $in-w: $n-char*($char-w + $gap);
 
     .backButton {
         position: absolute;
-        top: -50px;
+        top: 15px;
         right: 15px;
-        font-size: 40px;
-        color: rgb(255, 255, 255);
+        height: 25px;
+        padding: 10px;
+        color: rgb(0, 0, 0);
+        border: 2px solid black;
+        border-radius: 50%;
     }
 
     .text {
@@ -55,7 +58,8 @@ $in-w: $n-char*($char-w + $gap);
         max-width: 682px;
         line-height: 50px;
         color: black;
-    }
+    font-family: 'sfpro-regular';
+}
 
     img {
         height: 35px;
@@ -73,7 +77,9 @@ $in-w: $n-char*($char-w + $gap);
             flex-direction: column;
             gap: 40px;
             position: relative;
-
+           input{
+            max-width: 320px;
+           }
             .numberInput {
                 font-size: 30px !important;
                 display: block;
@@ -85,15 +91,15 @@ $in-w: $n-char*($char-w + $gap);
                     dimgrey 0, dimgrey $char-w,
                     transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
                 letter-spacing: $gap;
+                margin-left: 5px;
             }
         }
 
         .numberCode {
-            position: absolute !important;
+            display: flex;
             top: 165px;
             font-size: 30px;
         }
-
 
         .radioTaker {
             display: flex;
@@ -107,102 +113,151 @@ $in-w: $n-char*($char-w + $gap);
                 width: 320px;
                 border-bottom: 1px solid rgb(189, 186, 186);
                 outline: none;
-                height: 32px;
+                height: 33px;
                 margin-bottom: 25px;
+                resize: vertical;
+                max-height: 80px;
+                min-height: 33px;
+
+                &:focus {
+                    border-bottom: 1px solid rgb(12, 12, 12);
+                }
             }
 
             label {
-                color: gray;
+                color: rgb(0, 0, 0);
 
-                .numberCode {
-                    display: flex;
-                    max-width: 320px;
-                    align-items: center;
-
-                    h3 {
-                        font-size: 30px;
-                        margin-right: 5px;
-                    }
+                &:hover {
+                    color: rgb(136, 136, 136);
                 }
 
-                .radioTaker {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
+            }
+        }
+    }
 
-                    textarea {
-                        background-color: $main-theme-f2;
-                        border: none;
-                        font-size: 16px;
-                        width: 320px;
-                        border-bottom: 1px solid rgb(189, 186, 186);
-                        outline: none;
-                        height: 33px;
-                        margin-bottom: 25px;
-                        resize: vertical;
-                        max-height: 80px;
-                        min-height: 33px;
+}
 
-                        &:focus {
-                            border-bottom: 1px solid rgb(12, 12, 12);
-                        }
-                    }
+.buttonElement {
+    margin-left: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
 
-                    label {
-                        color: rgb(0, 0, 0);
 
-                        &:hover {
-                            color: rgb(136, 136, 136);
-                        }
+@media only screen and (max-width: 1340px) {
+    .popUp {
+        padding-inline: 50px;
+        padding-top: 40px;
+    }
+}
 
-                    }
-                }
+@media only screen and (max-width:1090px) {
+    .popUp {
+        .backButton {
+            height: 20px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        .text {
+            font-size: 36px;
+        }
+
+        img {
+            height: 30px;
+        }
+
+        form {
+            gap: 40px;
+            .formNameTaker .numberInput {
+                font-size: 25px !important;
             }
 
-            .buttonElement {
-                margin-left: 50%;
-                margin-bottom: 150px;
-            }
-
-            .popUpNavbar {
-                height: 60px;
-                display: flex;
-                width: 100%;
-                margin-bottom: 20px;
-
-                ul {
-                    display: flex;
-                    list-style: none;
-                    width: 30%;
-                    // border: 2px solid white;
-                    gap: 95px;
-
-                    li {
-
-                        a {
-                            color: $main-theme-dark;
-                            text-decoration: none;
-                            opacity: $text-font-opacity;
-                            transition: .5s;
-
-                            &:hover {
-                                opacity: 1;
-                                transition: .5s;
-                            }
-
-                        }
-                    }
-                }
-
-                img {
-                    margin-left: auto;
-                }
-            }
-
-            .buttonElement {
-                margin-left: auto;
-                margin-bottom: 50px;
+            .numberCode {
+                font-size: 25px;
             }
         }
     }
 }
+@media only screen and (max-width:956px) {
+    .popUp {
+        .backButton {
+            height: 20px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        .text {
+            font-size: 30px;
+            line-height: 35px;
+        }
+        img {
+            height: 27px;
+        }
+        form {
+            margin-top: 20px;
+            gap: 40px;
+            .formNameTaker .numberInput {
+                font-size: 22px !important;
+            }
+
+            .numberCode {
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:660px) {
+    .popUp {
+        .backButton {
+            height: 15px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        .text {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        img{
+            height: 22px;
+        }
+        form {
+            margin-top: 20px;
+            gap: 0px;
+            .formNameTaker{
+                gap: 20px;
+                height: 150px;
+                .numberInput{
+                    font-size: 18px !important;
+                }
+            }
+            .radioTaker{textarea {
+                width: 120%;
+                margin-bottom: 0;
+            }}
+            
+            .numberCode {
+                font-size: 18px;
+                color: rgb(49, 49, 49);
+            }
+        }
+    }
+}
+@media only screen and (max-width:475px) {
+   .popUp{
+    .text{
+        font-size: 16px;
+    }
+    img{
+        height: 16px;
+    }
+    form{
+        .radioTaker{
+           textarea{
+  width: 80%;
+           } 
+           label{
+            font-size: 14px;
+           }
+        }
+    }
+   }
+  }

@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     max-height: 100vh;
-
+    aspect-ratio: 100vw/100vh;
     box-sizing: border-box;
     // border: 2px solid red;
     overflow: hidden;
@@ -32,7 +32,7 @@
 
         max-width: 1020px;
         min-height: 64px;
-        font-family: 'SF Pro';
+        font-family: 'sfpro-regular';
         font-style: normal;
         font-weight: 540;
         font-size: 32px;
@@ -60,7 +60,7 @@
             text-align: end;
             max-width: 828px;
             min-height: 64px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'sfpro-regular';
             font-style: normal;
             font-weight: 540;
             font-size: 32px;
