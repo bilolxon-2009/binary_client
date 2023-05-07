@@ -1,59 +1,48 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import style from "./PopUp.module.scss"
-import hugging from "../../essets/hugging.png"
-import man from "../../essets/man.png"
+import hugging from "../../essets/hugging.svg"
+import man from "../../essets/man.svg"
 import stars from "../../essets/stars.svg"
 import messageBox from "../../essets/messageBox.svg"
-import logoBlack from "../../essets/logoBlack.svg"
-import { MainInput, CustomRadio, MainLink  } from '../../utils/Components';
+import { MainInput, CustomRadio, MainLink } from '../../utils/Components';
+import { FiXCircle } from "react-icons/fi"
+
 // Please use CSS module
 
 const PopUp = () => {
-  
-  return (
-    <div className={style.popUp} id='popUp'>
-      <h2 className={style.text}>Начните воплощать мечту <img src={stars} alt="" />  
-       в реальность <img src={man} alt="" /> вместе с нами <img src={hugging} alt="" /></h2>
-       <form action="#">
-         <div className={style.formNameTaker}><MainInput required type={"text"} placeholder={"Ваше имя*"} />
-         <MainInput type={"email"} placeholder={"example@gmail.com"} />
-         <input maxLength={9}   required className={style.numberInput} />
-         <h3 className={style.numberCode}>+998</h3>
-         </div>
-         <div className={style.radioTaker}>
-          <textarea placeholder='Ваша отрасль'></textarea>
-          <div><CustomRadio id={"newProject"} name={"typeofwork"} /> <label for="newProject">Новый продукт</label></div>
-          <div><CustomRadio id={"redesign"} name={"typeofwork"}/> <label for="redesign">Редизайн</label></div>
-         </div>
-       </form>
-       <div className={style.buttonElement} ><MainLink text="Отправить" icon={messageBox} link="#"/></div>
-       <div className={style.popUpNavbar}>
-       <ul>
-        <li>
-          <a href="#">
-            О нас
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Кейсы
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Услуги
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Контакты
-          </a>
-        </li>
-
-      </ul>
-       <img src={logoBlack} alt="" />
-       </div>
-    </div>
+  const anchor = useRef(null);
+  const [show, setShow] = useState(true);
+  const hidePopupWindow = () => {
+    setShow(!show);
+  };
+  console.log(show)
+  return (show ?
+    <div className={style.popUpLayer} >
+      <div className={style.popUpHideLayer} onClick={hidePopupWindow}></div>
+      <div className={style.popUp} id='popUp'>
+        <FiXCircle className={style.backButton} onClick={hidePopupWindow}
+          ref={anchor} />
+        <h2 className={style.text}>Начните воплощать мечту <img src={stars} alt="" />
+          в реальность <img src={man} alt="" /> вместе с нами <img src={hugging} alt="" /></h2>
+        <form action="#">
+          <div className={style.formNameTaker}><MainInput required type={"text"} placeholder={"Ваше имя*"} />
+            <MainInput type={"email"} placeholder={"example@gmail.com"} />
+            <div className={style.numberCode}> <h3 >+998</h3><input maxLength={9} required className={style.numberInput} onKeyPress={(event) => {
+              if (!/[0-9]/.test(event.key)) {
+                event.preventDefault();
+              }
+            }} />
+            </div>
+          </div>
+          <div className={style.radioTaker}>
+            <textarea placeholder='Ваша отрасль' maxCols={5}></textarea>
+            <div><CustomRadio id={"newProject"} name={"typeofwork"} className={style.radioButton} /> <label for="newProject">Новый продукт</label></div>
+            <div><CustomRadio id={"redesign"} name={"typeofwork"} className={style.radioButton} /> <label for="redesign">Редизайн</label></div>
+          </div>
+        </form>
+        <div className={style.buttonElement} ><MainLink text="Отправить" icon={messageBox} link="#" /></div>
+      </div>
+    </div> : <></>
   )
 }
 

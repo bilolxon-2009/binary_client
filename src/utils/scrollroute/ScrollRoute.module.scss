@@ -50,6 +50,20 @@
                     background-color: white;
                     border-radius: 50%;
                 }
+
+            }
+
+            & .bgColorWhite {
+                // border: 1px solid red;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background-color: black;
+                    border-radius: 50%;
+                }
             }
 
 

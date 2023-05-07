@@ -1,21 +1,24 @@
-
-.accordion__title{
+.accordion__title {
     display: flex;
     justify-content: space-between;
     gap: 68px;
     font-size: 24px;
     letter-spacing: 0.02em;
+    border: 2px solid white;
 }
-.line{
+
+.line {
     margin-top: 10px;
     width: 100%;
     border: 1px solid #ffffff80;
 }
+
 .answer__wrapper {
     overflow: hidden;
     height: 0;
     transition: 0.3s ease-in-out;
 }
+
 .answer__wrapper.open {
     height: 70px;
 }

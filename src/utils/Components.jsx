@@ -23,4 +23,4 @@ const CustomRadio = ({ id, name }) => {
   )
 }
 
-export { MainLink, MainInput, CustomRadio };
+export { MainLink, MainInput, CustomRadio }; 

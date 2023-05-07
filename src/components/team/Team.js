@@ -12,6 +12,7 @@ import king from "../../assets/👑.svg"
 import person from "../../assets/team_person_img.svg"
 import avextext from "../../assets/AVEX.svg"
 import { team_data } from './static'
+import { MainLink } from '../../utils/Components'
 
 function Team() {
     const [selectedData, setSelectedData] = useState(team_data[0])
@@ -80,10 +81,8 @@ function Team() {
 
             <div className={style.team_footer}>
                 <div className={style.team_btnWrap}>
-                    <button className='btns'>
-                        <span>Ваша выгода</span>
-                        <img src={book_icon} alt="" />
-                    </button>
+                    <MainLink text={"Ваша выгода"} icon={book_icon} link={"#"} />
+
                 </div>
 
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import style from "./Footer.module.scss";
 import office from "../../essets/🏢.webp";
-import man from "../../essets/👨🏻‍💼.png";
-import stars from "../../essets/✨.png";
+import man from "../../essets/man.svg";
+import stars from "../../essets/stars.svg";
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 
 const Footer = () => {
