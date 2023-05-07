@@ -4,12 +4,14 @@ import office from "../../essets/🏢.webp";
 import man from "../../essets/man.svg";
 import stars from "../../essets/stars.svg";
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
+import { Container } from '../../utils/Components';
 
 const Footer = () => {
 
   return (
-    <div id='footer'>
-      <div className={style.footer} id='footer'>
+    <div className={style.footer} id='footer'>
+      <Container>
+
         <div className={style.footer__container}>
           <h1>Мы расположены <img src={office} alt="" /></h1>
           <div className={style.branches}>
@@ -96,8 +98,7 @@ const Footer = () => {
           </div>
         </div>
         <ScrollRoute routeName={"footer"} />
-
-      </div>
+      </Container>
 
     </div>
   )

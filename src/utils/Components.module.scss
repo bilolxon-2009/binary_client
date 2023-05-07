@@ -1,14 +1,19 @@
 @import "../variables";
 
-.mainInput{
+.mainInput {
     border: none;
     border-bottom: 1px solid rgb(189, 186, 186);
     outline: none;
     background-color: $main-theme-f2;
     height: 35px;
     width: 320px;
-    &:focus{
-    border-bottom: 1.2px solid rgb(0, 0, 0);
+
+    &:focus {
+        border-bottom: 1.2px solid rgb(0, 0, 0);
     }
 }
 
+.container {
+    padding: $padding-container;
+    padding-top: 90px;
+}

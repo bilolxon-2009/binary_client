@@ -10,6 +10,9 @@ const MainLink = ({ text, icon, link }) => {
     </Link>
   )
 }
+const Container = ({ children }) => {
+  return <div className={style.container}>{children}</div>
+}
 
 const MainInput = ({ type, placeholder, value, setValue, length }) => {
   return (
@@ -23,4 +26,4 @@ const CustomRadio = ({ id, name }) => {
   )
 }
 
-export { MainLink, MainInput, CustomRadio }; 
+export { MainLink, MainInput, CustomRadio, Container }; 
