@@ -67,7 +67,7 @@ function ScrollRoute({ routeName }) {
             setNavIndex(2)
             setColor("black")
         }
-    }, [routeName, navData])
+    }, [routeName])
 
 
     return (

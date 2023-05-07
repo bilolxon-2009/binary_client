@@ -12,8 +12,11 @@ import house from '../../assets/house.svg'
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 function Case() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
+
+    console.log(data)
     return (
         <div className={style.case} id='case'>
+            <img className='active__img' src={data[0].image} alt="" />
             <h2 className={style.title}>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2>
             <div className='swiper__wrapper'>
                 <Swiper
@@ -45,7 +48,7 @@ function Case() {
                 <div className='active__wrapper'>
                     {
                         data ?
-                            <img className='active__img' src={data[activeTextIndex].image} alt="" />
+                            <img className='active__img' src={data[0].image} alt="" />
                             :
                             <></>
                     }
