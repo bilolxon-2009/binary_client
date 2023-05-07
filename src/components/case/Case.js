@@ -20,9 +20,9 @@ import beauty from '../../assets/beauty.svg'
 const data = [
     {
         "id": 1,
-        "name" : "Talia",
+        "name": "Talia",
         "image": talia
-        
+
     },
     {
         "id": 2,
@@ -56,11 +56,13 @@ const data = [
     },
     {
         "id": 8,
-        "name": "Slide 8"
+        "name": "Slide 8",
+        "image": geeni
     },
     {
         "id": 9,
-        "name": "Slide 9"
+        "name": "Slide 9",
+        "image": talia
     }
 
 ]

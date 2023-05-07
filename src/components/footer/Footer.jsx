@@ -48,25 +48,23 @@ const Footer = () => {
 
         <div className={style.footer__container_2}>
           <div className={style.footer__c2_left}>
-            <div className={style.footer__c2_left_in}>
-              <span>0101101011010101101</span>
-              <br />
-              <span style={{ "opacity": '55%' }}>110010101010101</span>
-              <br />
-              <span style={{ "opacity": '40%' }}>01100101011011001101101010</span>
-              <br />
-              <span style={{ "opacity": '55%' }}>1100101010101</span>
-              <br />
-              <span>01100101011010101001101</span>
-              <br />
-              <span style={{ "opacity": '40%' }}>110010011001010110</span>
-              <br />
-              <span>11001011001101010101</span>
-              <br />
-              <span>011001010110</span>
-              <br />
-              <span>110010100110101010101</span>
-            </div>
+            <span>0101101011010101101</span>
+            <br />
+            <span style={{ "opacity": '55%' }}>110010101010101</span>
+            <br />
+            <span style={{ "opacity": '40%' }}>01100101011011001101101010</span>
+            <br />
+            <span style={{ "opacity": '55%' }}>1100101010101</span>
+            <br />
+            <span>01100101011010101001101</span>
+            <br />
+            <span style={{ "opacity": '40%' }}>110010011001010110</span>
+            <br />
+            <span>11001011001101010101</span>
+            <br />
+            <span>011001010110</span>
+            <br />
+            <span>110010100110101010101</span>
           </div>
           <div className={style.footer__conclusion}>
             Начните воплощать мечту <img className={style.conclusion_starts} src={stars} alt="" />
@@ -75,26 +73,23 @@ const Footer = () => {
             месте с нами
           </div>
           <div className={style.footer__c2_right}>
-            <div className={style.footer__c2_right_in}>
-              <br />
-              <span> 0101101011010101101</span>
-              <br />
-              <span style={{ "opacity": '55%' }}> 110010101010101</span>
-              <br />
-              <span style={{ "opacity": '40%' }}> 01100101011011001101101010</span>
-              <br />
-              <span style={{ "opacity": '55%' }}> 1100101010101</span>
-              <br />
-              <span> 01100101011010101001101</span>
-              <br />
-              <span style={{ "opacity": '40%' }}> 110010011001010110</span>
-              <br />
-              <span>11001011001101010101</span>
-              <br />
-              <span> 011001010110</span>
-              <br />
-              <span> 110010100110101010101</span>
-            </div>
+            <span> 0101101011010101101</span>
+            <br />
+            <span style={{ "opacity": '55%' }}> 110010101010101</span>
+            <br />
+            <span style={{ "opacity": '40%' }}> 01100101011011001101101010</span>
+            <br />
+            <span style={{ "opacity": '55%' }}> 1100101010101</span>
+            <br />
+            <span> 01100101011010101001101</span>
+            <br />
+            <span style={{ "opacity": '40%' }}> 110010011001010110</span>
+            <br />
+            <span>11001011001101010101</span>
+            <br />
+            <span> 011001010110</span>
+            <br />
+            <span> 110010100110101010101</span>
           </div>
         </div>
         <ScrollRoute routeName={"footer"} />
