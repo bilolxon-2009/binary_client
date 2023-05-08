@@ -1,0 +1,58 @@
+@import "../../variables";
+
+.swiper {
+    width: 420px;
+    position: absolute;
+    margin-top: 60px;
+    cursor: pointer;
+    font-family: $font-sfpro-regular;
+}
+
+.swiper-slide {
+    font-size: 32px;
+    opacity: 0.5;
+    font-weight: 500px;
+}
+
+.caseSelection__swiper-slide:hover {
+    opacity: 1;
+}
+
+.caseSelection__swiper__wrapper {
+    position: relative;
+}
+.caseSelection__active__wrapper{
+    position: absolute;
+    right: 5%;
+
+}
+.caseSelection__active__img__wrapper{
+    max-width: 505px;
+    height: 320px;
+    display: grid;
+    place-items: center;
+    img{
+        width: 100%;
+        height: 164px;
+    }
+}
+.active__img__description{
+    margin-top: 10px;
+    max-width: 374px;
+    h3{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.6;
+        margin-top: 8px;
+    }
+}
+
+.line {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ffffff80;
+}
