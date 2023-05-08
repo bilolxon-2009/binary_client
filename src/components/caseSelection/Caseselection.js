@@ -97,10 +97,10 @@ function Caseselection() {
                             <></>
                     }
                 </Swiper>
-                <div className='caseSelection__active__wrapper'>
+                <div>
                     {
                         data ?
-                            <div>
+                            <div className='caseSelection__active__wrapper'>
                                 <div className='caseSelection__active__img__wrapper'>
                                     <img src={data[activeTextIndex].image} alt="" />
                                 </div>
