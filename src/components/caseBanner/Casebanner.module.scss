@@ -1,6 +1,106 @@
+@import "../../variables";
+
 .casebanner {
-    border: 2px solid blue;
-    background-color: gray;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    background-color: $main-theme-dark;
+    box-sizing: border-box;
+    padding: $padding-container;
+    padding-top: 70px;
+    font-family: $font-sfpro-bold;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-display: swap;
+
+    .casebanner_text {
+        font-size: 42px;
+        // width: 80%;
+        line-height: 50px;
+        color: white;
+        display: flex;
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
+    }
+
+    .casebanner_cards {
+        position: absolute;
+        right: 0;
+        top: 1%;
+        height: 98%;
+        // border: 2px solid white;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+
+        .casebanner_cards_wrap {
+            display: flex;
+            justify-content: flex-end;
+
+            &:nth-child(2) {
+                transform: translateX(180px);
+            }
+
+            .casebanner_card {
+                width: 359px;
+                height: 248px;
+                // border: 2px solid white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(90deg, #4C6BE6 0%, rgba(76, 107, 230, 0) 100%);
+            }
+
+            &:nth-child(1) {
+                .casebanner_card {
+                    &:nth-child(2) {
+                        background: linear-gradient(90deg, #505D5C 0%, rgba(80, 93, 92, 0) 100%) !important;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .casebanner_card {
+                    &:nth-child(2) {
+                        background: linear-gradient(270deg, rgba(141, 122, 179, 0) 0%, #8D7AB3 100%);
+                    }
+
+                    &:nth-child(3) {
+                        background: linear-gradient(90deg, #2F4373 0%, rgba(47, 67, 115, 0) 100%);
+
+                        img {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+
+
+            &:nth-child(3) {
+                .casebanner_card {
+                    &:nth-child(1) {
+                        background: linear-gradient(90deg, #00115E 0%, rgba(0, 0, 0, 0) 100%);
+                    }
+
+                    &:nth-child(2) {
+                        background: linear-gradient(90deg, #BC8F5B 0%, rgba(188, 143, 91, 0) 100%);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    &>a {
+        margin-bottom: 70px;
+    }
 }
