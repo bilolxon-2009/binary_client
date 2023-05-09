@@ -14,6 +14,7 @@ import geeni from '../../assets/geeni.svg'
 import euro from '../../assets/euro.svg'
 import beauty from '../../assets/beauty.svg'
 import billiard from '../../assets/billiard.svg'
+import { Container } from '../../utils/Components';
 
 const data = [
     {
@@ -69,52 +70,54 @@ function Caseselection() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
         <div className={style.caseselection}>
-            <h2 className={style.case__selection__title}>Наши лучшие работы <img src={billiard} alt="billiard" /></h2>
-            <div className='caseSelection__swiper__wrapper'>
-                <Swiper
-                    slidesPerView={4}
-                    spaceBetween={8}
-                    mousewheel={true}
-                    direction={"vertical"}
-                    loop={true}
-                    modules={[Mousewheel]}
-                    className="mySwiper"
-                >
-                    {
-                        data ?
-                            data.map((i, index) => (
-                                <SwiperSlide
-                                    style={
-                                        index === activeTextIndex
-                                            ? { opacity: "1" }
-                                            : { opacity: "0.5" }}
-                                    onClick={() => setActiveTextIndex(index)}
-                                >
-                                    {i.name} <div className='line'>
-                                    </div></SwiperSlide>
-                            ))
-                            :
-                            <></>
-                    }
-                </Swiper>
-                <div>
-                    {
-                        data ?
-                            <div className='caseSelection__active__wrapper'>
-                                <div className='caseSelection__active__img__wrapper'>
-                                    <img src={data[activeTextIndex].image} alt="" />
+            <Container>
+                <h2 className={style.case__selection__title}>Наши лучшие работы <img src={billiard} alt="billiard" /></h2>
+                <div className='caseSelection__swiper__wrapper'>
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={8}
+                        mousewheel={true}
+                        direction={"vertical"}
+                        loop={true}
+                        modules={[Mousewheel]}
+                        className="mySwiper"
+                    >
+                        {
+                            data ?
+                                data.map((i, index) => (
+                                    <SwiperSlide
+                                        style={
+                                            index === activeTextIndex
+                                                ? { opacity: "1" }
+                                                : { opacity: "0.5" }}
+                                        onClick={() => setActiveTextIndex(index)}
+                                    >
+                                        {i.name} <div className='line'>
+                                        </div></SwiperSlide>
+                                ))
+                                :
+                                <></>
+                        }
+                    </Swiper>
+                    <div>
+                        {
+                            data ?
+                                <div className='caseSelection__active__wrapper'>
+                                    <div className='caseSelection__active__img__wrapper'>
+                                        <img src={data[activeTextIndex].image} alt="" />
+                                    </div>
+                                    <div className='active__img__description'>
+                                        <h3>Описание</h3>
+                                        <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
+                                    </div>
                                 </div>
-                                <div className='active__img__description'>
-                                    <h3>Описание</h3>
-                                    <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
-                                </div>
-                            </div>
-                            :
-                            <></>
-                    }
+                                :
+                                <></>
+                        }
+                    </div>
                 </div>
-            </div>
-            <button className='btns'><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></button>
+                <button className='btns'><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></button>
+            </Container>
         </div>
     )
 }
