@@ -2,7 +2,6 @@
 
 .swiper {
     width: 420px;
-    height: 250px;
     position: absolute;
     margin-top: 60px;
     cursor: pointer;
@@ -15,23 +14,40 @@
     font-weight: 500px;
 }
 
-.swiper-slide:hover {
+.caseSelection__swiper-slide:hover {
     opacity: 1;
 }
 
-.swiper__wrapper {
+.caseSelection__swiper__wrapper {
     position: relative;
 }
-.active__img__wrapper{
+.caseSelection__active__wrapper{
+    position: absolute;
+    right: 0;
+
+}
+.caseSelection__active__img__wrapper{
     max-width: 505px;
-    height: 320px;
+    height: 230px;
     display: grid;
     place-items: center;
-    position: absolute;
-    right: 5%;
     img{
         width: 400px;
         height: 164px;
+    }
+}
+.active__img__description{
+    margin: 10px 70px 0 0;
+    max-width: 340px;
+    h3{
+        font-size: 22px;
+        font-weight: 500;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.6;
+        margin-top: 8px;
     }
 }
 

@@ -1,5 +1,67 @@
+
+@import "../../variables";
 .casefaq {
     width: 100%;
-    height: 100vh;
-    background-color: burlywood;
+    min-height: 100vh;
+    background-color: $main-theme-white;
+    font-family: $font-sfpro-bold;
+    box-sizing: border-box;
+    color: $main-theme-dark;
+    position: relative;
+
+    .casefaq__child {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        h2 {
+            max-width: 500px;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 32px;
+
+            img {
+                width: 28px;
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        bottom: 60px;
+        background-color: $main-theme-dark;
+    }
+}
+
+.casefaq__accordion {
+    font-family: $font-sfpro-regular;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 246px;
+    width: 420px;
+}
+
+.accordion::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .faq {
+        padding: 20px;
+
+        button {
+            right: 30%;
+            margin-left: 100px;
+        }
+    }
+
+    .faq__child {
+        flex-direction: column;
+        align-items: center;
+    }
 }
