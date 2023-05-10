@@ -1,5 +1,173 @@
 .casecolection {
     width: 100%;
     height: 100vh;
-    background-color: green;
+    overflow: hidden;
+    display: flex;
+    gap: 65px;
+    // justify-content: space-evenly;
+}
+
+.womenPic {
+    grid-area: women1;
+    width: 162px;
+    height: 434px;
+}
+
+.womenPic2 {
+    grid-area: women2;
+    width: 248px;
+    height: 117px;
+}
+
+.cameraPic {
+    grid-area: camera;
+    width: 246px;
+    height: 307px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.geeniPic {
+    grid-area: geeni;
+    width: 248px;
+    height: 307px;
+}
+
+.aromaPic {
+    grid-area: aroma;
+    width: 248px;
+    height: 307px;
+}
+
+.pizaPic {
+    margin-top: -30px;
+    grid-area: piza;
+    width: 420px;
+    height: 337px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.starbuckPic {
+    grid-area: starbuck;
+    width: 246px;
+    height: 307px;
+}
+
+.starbuckLittlePic {
+    grid-area: starbuck2;
+    width: 161px;
+    height: 307px;
+}
+
+.womenTonguePic {
+    grid-area: womenT;
+    width: 248px;
+    height: 307px;
+}
+
+.startbuckLargePic {
+    grid-area: starbuck3;
+    width: 246px;
+    height: 467px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.geeniPic2 {
+    grid-area: geeni2;
+    width: 246px;
+    height: 307px;
+}
+
+.pizaLittlePic {
+    grid-area: piza2;
+    width: 161px;
+    height: 307px;
+}
+
+.cameraPic2 {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.pizaPic2 {
+    width: 420px;
+    height: 307px;
+}
+
+.collectionBanner {
+    height: 1417px;
+    width: 676px;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "women1 women1  women2 women2 women2   camera camera camera"
+        "women1 women1  geeni geeni geeni camera camera camera"
+        "women1 women1 geeni geeni geeni aroma aroma aroma"
+        " piza piza piza piza piza aroma aroma aroma"
+        " piza piza piza piza piza  starbuck starbuck starbuck"
+        " starbuck2 starbuck2   womenT womenT womenT    starbuck starbuck starbuck "
+        " starbuck2 starbuck2   womenT womenT womenT    starbuck3 starbuck3 starbuck3"
+        "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+        "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+    ;
+}
+
+.collectionBanner2 {
+    margin-top: 10px;
+    display: flex;
+    width: 676px;
+    gap: 10px;
+}
+
+.collectionAll {
+    animation: banner 15s linear infinite forwards;
+}
+
+@keyframes banner {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: calc(-1734px + 100vh)
+    }
+}
+
+
+.bannerText {
+    margin-top: 97px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &>h3 {
+        width: 257px;
+        font-family: 'sfpro-bold';
+        font-size: 36px;
+        line-height: 43px;
+    }
+
+    div {
+   display: grid;
+   gap: 30px;
+        h3 {
+            font-family: 'sfpro-bold';
+            font-size: 36px;
+            line-height: 43px;
+        }
+    }
 }
