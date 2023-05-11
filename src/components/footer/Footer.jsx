@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from "./Footer.module.scss";
 import office from "../../essets/🏢.webp";
 import man from "../../essets/man.svg";
 import stars from "../../essets/stars.svg";
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import { Container } from '../../utils/Components';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const [idRoute, setIdRoute] = useState("footer")
+  let location = useLocation().pathname
+
+  useEffect(() => {
+    if (location == "/case") {
+      setIdRoute("casefooter")
+    } else {
+      setIdRoute("footer")
+    }
+
+  }, [location])
+
 
   return (
-    <div className={style.footer} id='footer'>
+    <div className={style.footer} id={idRoute}>
       <Container>
 
         <div className={style.footer__container}>
@@ -92,7 +105,7 @@ const Footer = () => {
             <span> 110010100110101010101</span>
           </div>
         </div>
-        <ScrollRoute routeName={"footer"} />
+        <ScrollRoute routeName={idRoute} />
       </Container>
 
     </div>

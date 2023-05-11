@@ -4,6 +4,7 @@
     overflow: hidden;
     display: flex;
     gap: 65px;
+    position: relative;
     // justify-content: space-evenly;
 }
 
@@ -162,8 +163,9 @@
     }
 
     div {
-   display: grid;
-   gap: 30px;
+        display: grid;
+        gap: 30px;
+
         h3 {
             font-family: 'sfpro-bold';
             font-size: 36px;

@@ -15,6 +15,7 @@ import euro from '../../assets/euro.svg'
 import beauty from '../../assets/beauty.svg'
 import billiard from '../../assets/billiard.svg'
 import { Container } from '../../utils/Components';
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 
 const data = [
     {
@@ -69,7 +70,7 @@ const data = [
 function Caseselection() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
-        <div className={style.caseselection}>
+        <div className={style.caseselection} id='caseselection'>
             <Container>
                 <h2 className={style.case__selection__title}>Наши лучшие работы <img src={billiard} alt="billiard" /></h2>
                 <div className='caseSelection__swiper__wrapper'>
@@ -118,6 +119,7 @@ function Caseselection() {
                 </div>
                 <button className='btns'><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></button>
             </Container>
+            <ScrollRoute routeName={"caseselection"} />
         </div>
     )
 }

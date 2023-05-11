@@ -10,10 +10,11 @@ import alastin from "../../assets/alastin.svg"
 import blackImg from "../../assets/black.svg"
 import beauty from "../../assets/beauty.svg"
 import geeni from "../../assets/geeni.svg"
+import ScrollRoute from '../../utils/scrollroute/Scrollroute'
 
 function Casebanner() {
     return (
-        <div className={styles.casebanner}>
+        <div className={styles.casebanner} id='casebanner'>
             <div className={styles.casebanner_text}>
                 <h1>Наш кейс</h1><img src={suitecase} alt="" />
             </div>
@@ -48,6 +49,7 @@ function Casebanner() {
 
             </div>
             <MainLink text={"Подробнее"} icon={eyes} link={"#"} />
+            <ScrollRoute routeName={"casebanner"} />
         </div>
     )
 }

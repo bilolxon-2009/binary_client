@@ -36,36 +36,99 @@ function ScrollRoute({ routeName }) {
             id: 6,
             nav_title: "Footer",
             route: "footer"
-        }
+        },
+        {
+            id: 7,
+            nav_title: "Banner",
+            route: "casebanner"
+        },
+        {
+            id: 8,
+            nav_title: "Collection",
+            route: "casecollection"
+        },
+        {
+            id: 9,
+            nav_title: "Caseselection",
+            route: "caseselection"
+        },
+        {
+            id: 10,
+            nav_title: "CaseFaq",
+            route: "casefaq"
+        },
+        {
+            id: 11,
+            nav_title: "casecontact",
+            route: "casecontact"
+        },
+        {
+            id: 12,
+            nav_title: "Footer",
+            route: "casefooter"
+        },
     ];
 
     // console.log(navData.slice(3, 6))
     useEffect(() => {
-        if (routeName === "banner") {
-            setNavRoute(navData.slice(0, 3))
-            setNavIndex(0)
-        } if (routeName === "video") {
-            setNavRoute(navData.slice(0, 3))
-            setNavIndex(1)
+        switch (routeName) {
+            case "banner":
+                setNavRoute(navData.slice(0, 3))
+                setNavIndex(0)
+                break;
+            case "video":
+                setNavRoute(navData.slice(0, 3))
+                setNavIndex(1)
+                break;
+            case "case":
+                setNavRoute(navData.slice(1, 4))
+                setNavIndex(1)
+                break;
+            case "team":
+                setNavRoute(navData.slice(2, 5))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "faq":
+                setNavRoute(navData.slice(3, 6))
+                setNavIndex(1)
+                break;
+            case "footer":
+                setNavRoute(navData.slice(3, 6))
+                setNavIndex(2)
+                // setColor("black")
+                break;
+            case "casebanner":
+                setNavRoute(navData.slice(6, 9))
+                setNavIndex(0)
+                // setColor("black")
+                break;
+            case "casecollection":
+                setNavRoute(navData.slice(6, 9))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "caseselection":
+                setNavRoute(navData.slice(7, 10))
+                setNavIndex(1)
+                // setColor("black")
+                break;
+            case "casefaq":
+                setNavRoute(navData.slice(8, 11))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "casecontact":
+                setNavRoute(navData.slice(9, 12))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "casefooter":
+                setNavRoute(navData.slice(9, 12))
+                setNavIndex(2)
+                // setColor("black")
+                break;
 
-        }
-        if (routeName === "case") {
-            setNavRoute(navData.slice(1, 4))
-            setNavIndex(1)
-        }
-        if (routeName === "team") {
-            setNavRoute(navData.slice(2, 5))
-            setNavIndex(1)
-            setColor("black")
-        }
-        if (routeName === "faq") {
-            setNavRoute(navData.slice(3, 6))
-            setNavIndex(1)
-        }
-        if (routeName === "footer") {
-            setNavRoute(navData.slice(3, 6))
-            setNavIndex(2)
-            setColor("black")
         }
     }, [routeName])
 

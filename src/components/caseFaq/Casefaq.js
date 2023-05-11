@@ -4,9 +4,10 @@ import Accordion from './accordion/Accordion';
 import accordionData from './accordion/AccordionData.json';
 import finger from '../../essets/finger.svg'
 import { Container } from '../../utils/Components';
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 function Casefaq() {
     return (
-        <div className={style.casefaq}>
+        <div className={style.casefaq} id='casefaq'>
             <Container>
                 <div className={style.casefaq__child}>
                     <h2>Имея при себе много опыта, мы можем помочь в процветании <u>вашего</u> <img src={finger} alt='finger' /> бизнеса</h2>
@@ -18,6 +19,7 @@ function Casefaq() {
                 </div>
                 <button className='btns'><span>Наше расположение</span></button>
             </Container>
+            <ScrollRoute routeName={"casefaq"} />
         </div>
     )
 }
