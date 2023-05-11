@@ -11,35 +11,44 @@
     grid-area: women1;
     width: 162px;
     height: 434px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .womenPic2 {
     grid-area: women2;
     width: 248px;
     height: 117px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .cameraPic {
     grid-area: camera;
     width: 246px;
     height: 307px;
-
     img {
         width: 100%;
         height: 100%;
+        transition: all .5s ease-in-out;
     }
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .geeniPic {
     grid-area: geeni;
     width: 248px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .aromaPic {
     grid-area: aroma;
     width: 248px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .pizaPic {
@@ -49,27 +58,35 @@
     height: 337px;
 
     img {
-        height: 100%;
         width: 100%;
+        height: 100%;
+        transition: all .5s ease-in-out;
     }
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .starbuckPic {
     grid-area: starbuck;
     width: 246px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .starbuckLittlePic {
     grid-area: starbuck2;
     width: 161px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .womenTonguePic {
     grid-area: womenT;
     width: 248px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .startbuckLargePic {
@@ -78,33 +95,43 @@
     height: 467px;
 
     img {
-        height: 100%;
         width: 100%;
+        height: 100%;
+        transition: all .5s ease-in-out;
     }
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .geeniPic2 {
     grid-area: geeni2;
     width: 246px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .pizaLittlePic {
     grid-area: piza2;
     width: 161px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .cameraPic2 {
     img {
         width: 100%;
         height: 100%;
+        transition: all .5s ease-in-out;
     }
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .pizaPic2 {
     width: 420px;
     height: 307px;
+    img{ transition: all .5s ease-in-out;}
+    &:hover{ img{ transform: scale(1.1);transition: all .5s ease-in-out;}}
 }
 
 .collectionBanner {
@@ -133,7 +160,7 @@
 }
 
 .collectionAll {
-    animation: banner 15s linear infinite forwards;
+    animation: banner 40s linear alternate infinite forwards;
 }
 
 @keyframes banner {
@@ -154,13 +181,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    &>h3 {
-        width: 257px;
-        font-family: 'sfpro-bold';
-        font-size: 36px;
-        line-height: 43px;
-    }
-
+    
     div {
    display: grid;
    gap: 30px;
@@ -169,5 +190,72 @@
             font-size: 36px;
             line-height: 43px;
         }
+        p{
+            color: rgb(96, 96, 96);
+        }
+        a{
+            width: 200px !important;
+        }
     }
+}
+
+
+
+@media only screen and (max-width:678px) {
+    .casecolection {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        // justify-content: space-evenly;
+    }
+    .collectionAllWrapper{
+        height: 450px !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+    .collectionAll {
+        animation: banner 40s linear alternate infinite forwards;
+    }
+    
+    @keyframes banner {
+        from {
+            margin-top: 0;
+        }
+    
+        to {
+            margin-top: calc(-1734px + 350px)
+        }
+    }
+    
+    
+    .bannerText {
+        padding-inline: 30px;
+        margin-top: 0px;
+        height: 560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        
+        div {
+       display: grid;
+       gap: 30px;
+            h3 {
+                font-family: 'sfpro-bold';
+                font-size: 36px;
+                line-height: 43px;
+            }
+            p{
+                color: rgb(96, 96, 96);
+            }
+            a{
+                width: 200px !important;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    
+    
 }

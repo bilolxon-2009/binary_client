@@ -16,6 +16,7 @@ import {MainLink} from "../../utils/Components"
 function Casecollection() {
     return (
         <div className={style.casecolection}>
+           <div className={style.collectionAllWrapper}>
            <div className={style.collectionAll}>
            <div className={style.collectionBanner}>
                 <div className={style.womenPic}><img src={womenBag} alt='banner'/></div>
@@ -36,11 +37,15 @@ function Casecollection() {
                 <div className={style.pizaPic2}><img src={pizza} alt='banner'/></div>
             </div>
            </div>
+           </div>
            <div className={style.bannerText}>
+            <div>
             <h3>Смотри, что мы делаем каждый день!</h3>
+            <p>Bu yerda qo'shimcha description text yoziladi.</p>
+            </div>
             <div>
                 <h3>Делаем и могём!</h3>
-                <MainLink text="Все ещё мало?" link="#"/>
+                <MainLink text="Все ещё мало?" link="#" className={style.collectionBtn}/>
             </div>
            </div>
         </div>
