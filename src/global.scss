@@ -15,7 +15,7 @@
     transform: skew(-21deg);
     align-items: center;
     transition: 0.5s;
-    width: auto;
+    width: fit-content;
 
     span {
         display: inline-block;
@@ -41,23 +41,23 @@
 }
 
 @media only screen and (max-width:660px) {
-    .btns{
+    .btns {
         font-size: 18px;
         padding: 10px 22px;
-    
+
         span {
             margin-right: 12px;
         }
     }
-  }
-  @media only screen and (max-width:475px) {
-      .btns{
+}
+
+@media only screen and (max-width:475px) {
+    .btns {
         font-size: 16px;
         padding: 8px 16px;
-    
+
         span {
             margin-right: 8px;
         }
-      }
     }
-  
+}

@@ -6,7 +6,7 @@ const MainLink = ({ text, icon, link }) => {
   return (
     <Link className="btns" to={link}>
       <span>{text}</span>
-      <img src={icon} alt="iconic svg" />
+    {icon ?  <img src={icon} alt='iconic svg'/> : <></>}
     </Link>
   )
 }

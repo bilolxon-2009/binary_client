@@ -31,7 +31,7 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link to={"#"}>
+          <Link to={"service"}>
             Услуги
           </Link>
         </li>
