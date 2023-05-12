@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./Case.module.scss"
 import family from '../../essets/family.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,6 +19,7 @@ import beauty from '../../assets/beauty.svg'
 import billiard from '../../assets/billiard.svg'
 import scientist from '../../assets/scientist.svg'
 import { Container } from '../../utils/Components';
+import { useLocation } from 'react-router-dom';
 
 const data = [
     {
@@ -70,13 +71,22 @@ const data = [
 
 ]
 
-function Case({about}) {
+function Case({ about }) {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
+    const [idRoute, setIdRoute] = useState("case")
+    let location = useLocation().pathname
 
+    useEffect(() => {
+        if (location == "/case") {
+            setIdRoute("caseselection")
+        } else {
+            setIdRoute("case")
+        }
+    }, [location])
     return (
-        <div className={style.case} id='case'>
+        <div className={style.case} id={idRoute}>
             <Container>
-                <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard'/> </h2>}</div>
+                <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard' /> </h2>}</div>
                 <div className='swiper__wrapper'>
                     <Swiper
                         slidesPerView={4}
@@ -114,12 +124,12 @@ function Case({about}) {
                                 <></>
                         }
                     </div>
-                    
+
                 </div>
-                <button className='btns'>{about ? <div><span>О команде</span><img src={medals} alt='Medals' /></div> : <div><span>Посмотреть эту работу</span><img src={scientist} alt='scientist'/></div>}</button>
+                <button className='btns'>{about ? <div><span>О команде</span><img src={medals} alt='Medals' /></div> : <div><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></div>}</button>
 
             </Container>
-            <ScrollRoute routeName={"case"} />
+            <ScrollRoute routeName={idRoute} />
         </div>
     )
 }

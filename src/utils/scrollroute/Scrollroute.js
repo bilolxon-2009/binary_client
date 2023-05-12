@@ -57,13 +57,9 @@ function ScrollRoute({ routeName }) {
             nav_title: "CaseFaq",
             route: "casefaq"
         },
+
         {
             id: 11,
-            nav_title: "casecontact",
-            route: "casecontact"
-        },
-        {
-            id: 12,
             nav_title: "Footer",
             route: "casefooter"
         },
@@ -118,28 +114,19 @@ function ScrollRoute({ routeName }) {
                 setNavIndex(1)
                 setColor("black")
                 break;
-            case "casecontact":
-                setNavRoute(navData.slice(9, 12))
-                setNavIndex(1)
-                setColor("black")
-                break;
             case "casefooter":
-                setNavRoute(navData.slice(9, 12))
+                setNavRoute(navData.slice(8, 11))
                 setNavIndex(2)
                 // setColor("black")
                 break;
-
         }
     }, [routeName])
-
-
     return (
         <div className={style.rounds}>
-            <ul >
+            <ul>
                 {navRoute?.map((nav, inx) => (
                     <li key={inx} >
                         <Link style={(inx === navIndex && color) ? { border: "1px solid black" } : ""} className={`${inx === navIndex ? style.activeclass : ""} ${color ? style.bgColorWhite : ""}`} to={nav.route} spy={true} smooth={true} offset={0} duration={500} >
-
                         </Link>
                     </li>
                 ))}
