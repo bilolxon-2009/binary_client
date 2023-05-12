@@ -1,18 +1,6 @@
 import React, { useState } from 'react'
 import style from "./Caseselection.module.scss"
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/free-mode";
-import { Mousewheel } from "swiper";
-import "swiper/css";
-import "./caseSelectionSwiper.scss";
 import scientist from '../../assets/scientist.svg'
-import talia from '../../assets/talia.svg'
-import black from '../../assets/black.svg'
-import alastin from '../../assets/alastin.svg'
-import mold from '../../assets/mold.svg'
-import geeni from '../../assets/geeni.svg'
-import euro from '../../assets/euro.svg'
-import beauty from '../../assets/beauty.svg'
 import billiard from '../../assets/billiard.svg'
 import { Container } from '../../utils/Components';
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
@@ -66,9 +54,9 @@ const data = [
     }
 
 ]
+import Case from '../case/Case';
 
 function Caseselection() {
-    const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
         <div className={style.caseselection} id='caseselection'>
             <Container>

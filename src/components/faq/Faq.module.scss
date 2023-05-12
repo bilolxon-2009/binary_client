@@ -1,12 +1,17 @@
 @import "../../variables";
-
+.faq__dark{
+    background-color: $main-theme-dark;
+    color: $main-text-color;
+}
+.faq__light{
+    background-color: $main-theme-white;
+    color: $main-theme-dark;
+}
 .faq {
     width: 100%;
     min-height: 100vh;
-    background-color: $main-theme-dark;
     font-family: $font-sfpro-bold;
     box-sizing: border-box;
-    color: $main-text-color;
     position: relative;
 
     .faq__child {

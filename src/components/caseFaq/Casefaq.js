@@ -20,6 +20,7 @@ function Casefaq() {
                 <button className='btns'><span>Наше расположение</span></button>
             </Container>
             <ScrollRoute routeName={"casefaq"} />
+
         </div>
     )
 }
