@@ -20,7 +20,7 @@ function Faq({ dark }) {
                         ))}
                     </div>
                 </div>
-                <button className='btns'><span>Оставить заявку</span><img src={message} alt='Message' /></button>
+                <button className='btns'>{dark ? <div><span>Оставить заявку</span><img src={message} alt='Message' /></div> : <span>Наше расположение</span>}</button>
                 <ScrollRoute routeName={"faq"} />
             </Container>
 

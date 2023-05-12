@@ -17,7 +17,7 @@ function Home() {
             <Video />
             <Case about={true} />
             <Team />
-            <Faq dark={true}/>
+            <Faq dark={true} />
             <Footer />
             <PopUp />
         </div>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from "./Caseselection.module.scss"
+<<<<<<< HEAD
 import { Container } from '../../utils/Components';
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import family from '../../essets/family.svg'
@@ -71,60 +72,16 @@ const data = [
     }
 
 ]
+=======
+
+import Case from '../case/Case';
+>>>>>>> origin/jaloliddin
 
 function Caseselection() {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
     return (
         <div className={style.caseselection} id='caseselection'>
-            <Container>
-                <h2 className={style.case__selection__title}>Наши лучшие работы <img src={billiard} alt="billiard" /></h2>
-                <div className='caseSelection__swiper__wrapper'>
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={8}
-                        mousewheel={true}
-                        direction={"vertical"}
-                        loop={true}
-                        modules={[Mousewheel]}
-                        className="mySwiper"
-                    >
-                        {
-                            data ?
-                                data.map((i, index) => (
-                                    <SwiperSlide
-                                        style={
-                                            index === activeTextIndex
-                                                ? { opacity: "1" }
-                                                : { opacity: "0.5" }}
-                                        onClick={() => setActiveTextIndex(index)}
-                                    >
-                                        {i.name} <div className='line'>
-                                        </div></SwiperSlide>
-                                ))
-                                :
-                                <></>
-                        }
-                    </Swiper>
-                    <div>
-                        {
-                            data ?
-                                <div className='caseSelection__active__wrapper'>
-                                    <div className='caseSelection__active__img__wrapper'>
-                                        <img src={data[activeTextIndex].image} alt="" />
-                                    </div>
-                                    <div className='active__img__description'>
-                                        <h3>Описание</h3>
-                                        <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
-                                    </div>
-                                </div>
-                                :
-                                <></>
-                        }
-                    </div>
-                </div>
-                <button className='btns'><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></button>
-            </Container>
-            <ScrollRoute routeName={"caseselection"} />
+          <Case/>
         </div>
     )
 }
