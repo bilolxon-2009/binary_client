@@ -5,7 +5,7 @@ import Faq from '../faq/Faq';
 function Casefaq() {
     return (
         <div className={style.casefaq} id='casefaq'>
-          <Faq/>
+            <Faq />
             <ScrollRoute routeName={"casefaq"} />
 
         </div>
