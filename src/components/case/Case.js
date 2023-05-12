@@ -16,6 +16,8 @@ import mold from '../../assets/mold.svg'
 import geeni from '../../assets/geeni.svg'
 import euro from '../../assets/euro.svg'
 import beauty from '../../assets/beauty.svg'
+import billiard from '../../assets/billiard.svg'
+import scientist from '../../assets/scientist.svg'
 import { Container } from '../../utils/Components';
 
 const data = [
@@ -57,25 +59,24 @@ const data = [
     },
     {
         "id": 8,
-        "name": "Slide 8",
-        "image": geeni
+        "name": "Alastin",
+        "image": alastin
     },
     {
         "id": 9,
-        "name": "Slide 9",
-        "image": talia
+        "name": "Geeni",
+        "image": geeni
     }
 
 ]
 
-function Case() {
+function Case({about}) {
     const [activeTextIndex, setActiveTextIndex] = useState(0)
-
 
     return (
         <div className={style.case} id='case'>
             <Container>
-                <h2 className={style.title}>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2>
+                <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard'/> </h2>}</div>
                 <div className='swiper__wrapper'>
                     <Swiper
                         slidesPerView={4}
@@ -113,8 +114,9 @@ function Case() {
                                 <></>
                         }
                     </div>
+                    
                 </div>
-                <button className='btns'><span>О команде</span><img src={medals} alt='Medals' /></button>
+                <button className='btns'>{about ? <div><span>О команде</span><img src={medals} alt='Medals' /></div> : <div><span>Посмотреть эту работу</span><img src={scientist} alt='scientist'/></div>}</button>
 
             </Container>
             <ScrollRoute routeName={"case"} />
