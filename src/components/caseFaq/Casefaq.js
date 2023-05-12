@@ -1,7 +1,7 @@
 import React from 'react'
 import style from "./Casefaq.module.scss"
-import Accordion from './accordion/Accordion';
-import accordionData from './accordion/AccordionData.json';
+import Accordion from '../faq/accordion/Accordion';
+import accordionData from '../faq/accordion/AccordionData.json';
 import finger from '../../essets/finger.svg'
 import { Container } from '../../utils/Components';
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
