@@ -4753,7 +4753,7 @@ grapheme-splitter@^1.0.4:
 
 gsap@^3.11.5:
   version "3.11.5"
-  resolved "https://registry.npmjs.org/gsap/-/gsap-3.11.5.tgz"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.5.tgz#97ef65091f43868be387803f9db277e8cd5bd041"
   integrity sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==
 
 gzip-size@^6.0.0:

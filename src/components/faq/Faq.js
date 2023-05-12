@@ -7,9 +7,10 @@ import finger from '../../essets/finger.svg'
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import { Container } from '../../utils/Components';
 
-function Faq() {
+function Faq({ dark }) {
     return (
-        <div className={style.faq} id='faq'>
+         <div className={`${dark ? style.faq__dark : style.faq__light}`} id='faq'>
+            <div className={style.faq}>
             <Container>
                 <div className={style.faq__child}>
                     <h2>Имея при себе много опыта, мы можем помочь в процветании <u>вашего</u> <img src={finger} alt='finger' /> бизнеса</h2>
@@ -19,10 +20,11 @@ function Faq() {
                         ))}
                     </div>
                 </div>
-                <button className='btns'><span>Оставить заявку</span><img src={message} alt='Message' /></button>
+                <button className='btns'>{dark ? <div><span>Оставить заявку</span><img src={message} alt='Message' /></div> : <span>Наше расположение</span>}</button>
                 <ScrollRoute routeName={"faq"} />
             </Container>
 
+            </div>
         </div>
     );
 }

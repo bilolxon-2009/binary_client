@@ -15,9 +15,9 @@ function Home() {
             {/* <Header /> */}
             <Banner />
             <Video />
-            <Case />
+            <Case about={true} />
             <Team />
-            <Faq />
+            <Faq dark={true} />
             <Footer />
             <PopUp />
         </div>

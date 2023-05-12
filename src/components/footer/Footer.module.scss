@@ -82,6 +82,7 @@
     position: absolute;
     width: 100%;
     left: 0;
+    bottom: 0;
 
 
     .footer__c2_left {
@@ -124,6 +125,7 @@
         color: rgba(255, 255, 255, 0.49);
         text-align: right;
         // border: 2px solid;
+        padding-right: 1px;
     }
 
 }
