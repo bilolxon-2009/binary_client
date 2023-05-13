@@ -56,7 +56,10 @@
                 align-items: center;
                 background: linear-gradient(90deg, #4C6BE6 0%, rgba(76, 107, 230, 0) 100%);
                 transition: .5s;
+                transition-timing-function: linear;
                 cursor: pointer;
+                transform: translateX(200px);
+                opacity: 0;
 
                 &:hover {
                     transform: scale(1.02);

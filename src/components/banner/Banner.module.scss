@@ -21,12 +21,18 @@
         width: 80%;
         line-height: 50px;
         color: white;
+        position: relative;
+        z-index: 1000;
     }
 
     &>img {
         position: absolute;
         right: 134px;
         bottom: 106px;
+        transform: translateX(200px);
+        transition: 1s;
+        transition-timing-function: linear;
+        opacity: 0;
     }
 
     &>a {
