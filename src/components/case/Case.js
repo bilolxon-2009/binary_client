@@ -106,6 +106,7 @@ function Case({ about }) {
                                                 ? { opacity: "1" }
                                                 : { opacity: "0.5" }}
                                         onClick={() => setActiveTextIndex(index)}
+                                        key={index}
                                     >
                                         {i.name} <div className='line'>
                                         </div></SwiperSlide>

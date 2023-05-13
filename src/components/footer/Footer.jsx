@@ -12,7 +12,7 @@ const Footer = () => {
   let location = useLocation().pathname
 
   useEffect(() => {
-    if (location == "/case") {
+    if (location === "/case") {
       setIdRoute("casefooter")
     } else {
       setIdRoute("footer")
@@ -51,9 +51,9 @@ const Footer = () => {
                 width="591"
                 height="353"
                 style={{ border: 0 }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
                 title='binary'></iframe>
             </div>
           </div>

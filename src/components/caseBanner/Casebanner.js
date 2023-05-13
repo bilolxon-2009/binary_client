@@ -12,6 +12,7 @@ import beauty from "../../assets/beauty.svg"
 import geeni from "../../assets/geeni.svg"
 import ScrollRoute from '../../utils/scrollroute/Scrollroute'
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom'
 
 function Casebanner() {
     const div1 = useRef(null);
@@ -50,9 +51,12 @@ function Casebanner() {
             </div>
             <div className={styles.casebanner_cards}>
                 <div className={styles.casebanner_cards_wrap}>
-                    <div className={`${styles.casebanner_card}`} ref={div1} >
-                        <img src={moldImg} alt="" />
-                    </div>
+                    <Link to={`/project/${1}`} state={{ img: moldImg }}>
+                        <div className={`${styles.casebanner_card}`} ref={div1} >
+                            <img src={moldImg} alt="" />
+                        </div>
+                    </Link>
+
                     <div className={`${styles.casebanner_card} talia`} ref={div2}>
                         <img src={taliaImg} alt="" />
                     </div>

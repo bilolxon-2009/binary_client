@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import Casepage from "./pages/case/Casepage";
 import Service from "./pages/service/Service";
+import Singlepage from "./pages/singlepage/Singlepage";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/case' element={<Casepage />} />
         <Route path='/service' element={<Service />} />
+        <Route path="/project/:id" element={<Singlepage />} />
+
       </Routes>
     </BrowserRouter>
   );

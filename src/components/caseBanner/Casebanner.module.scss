@@ -58,11 +58,11 @@
                 transition: .5s;
                 transition-timing-function: linear;
                 cursor: pointer;
-                transform: translateX(200px);
+                transform: translateX(200px) scale(1);
                 opacity: 0;
 
                 &:hover {
-                    transform: scale(1.02);
+                    transform: scale(1.02) !important;
                 }
             }
 
