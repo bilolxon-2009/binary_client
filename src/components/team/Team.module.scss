@@ -79,11 +79,9 @@
                 display: flex;
                 justify-content: space-between;
 
-                .devs_selected {
-                    filter: contrast(40%);
-                }
 
                 .team_dev_avatar {
+                    border: 2px solid transparent;
                     cursor: pointer;
                     position: relative;
                     width: 55px;
@@ -105,14 +103,15 @@
 
                         img {
                             position: absolute;
-                            right: 50px;
+                            right: 40px;
                             transform: skew(21deg)
                         }
 
                         h1 {
-                            right: 130px;
+                            right: 110px;
                             position: absolute;
                             top: 10px;
+                            font-size: 18px;
                             transform: skew(21deg);
                             font-family: $font-sfpro-bold;
                         }
@@ -121,7 +120,7 @@
                             position: absolute;
                             font-size: 11px;
                             bottom: 10px;
-                            right: 130px;
+                            right: 110px;
                             opacity: .6;
                             transform: skew(21deg);
                             font-family: $font-sfpro-light;
@@ -146,6 +145,13 @@
                         }
                     }
                 }
+
+                .devs_selected {
+                    // filter: contrast(40%);
+                    border: 2px solid blue;
+                    background-color: $main-theme-gray;
+                }
+
             }
         }
 

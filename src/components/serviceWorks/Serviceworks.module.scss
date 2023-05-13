@@ -6,15 +6,16 @@
     height: 100vh;
 }
 
-.serviceworks__container{
+.serviceworks__container {
     padding-top: 97px;
     padding-bottom: 97px;
     padding-left: 130px;
 }
 
-.serviceworks__header{
+.serviceworks__header {
     padding-bottom: 25px;
-    h2{
+
+    h2 {
         font-family: 'Encode Sans Expanded', sans-serif;
         font-style: normal;
         font-weight: 540;
@@ -24,15 +25,15 @@
     }
 }
 
-.serviceworks__choices{
-    display:grid;
+.serviceworks__choices {
+    display: grid;
     grid-template-columns: 395px 559px;
     grid-row: auto auto;
     grid-column-gap: 40px;
     grid-row-gap: 10px;
 }
 
-.serviceworks__choise1{
+.serviceworks__choise1 {
     width: 395px;
     transition: .5s;
     height: 143px;
@@ -44,8 +45,8 @@
     justify-content: center;
     padding-bottom: 30px;
     padding-left: 30px;
-    
-    h2{
+
+    h2 {
         font-family: 'Encode Sans Expanded', sans-serif;
         font-style: normal;
         font-weight: 760;
@@ -55,11 +56,13 @@
         padding-bottom: 12px;
         display: flex;
         align-items: center;
-        img{
+
+        img {
             padding-left: 7px;
         }
     }
-    p{
+
+    p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -67,21 +70,27 @@
         line-height: 17px;
         color: #000000;
         opacity: 0.8;
-    };
+    }
+
+    ;
 }
 
-.serviceworks__choise1:hover{
+.serviceworks__choise1:hover {
     background-color: #000000;
     transition: .5s;
-    h2{
+
+    h2 {
         color: #fff;
     }
-    p{
+
+    p {
         color: #fff;
-    };
+    }
+
+    ;
 }
 
-.serviceworks__choise2{
+.serviceworks__choise2 {
     width: 559px;
     height: 143px;
     background: #fafafa;
@@ -93,7 +102,8 @@
     padding-bottom: 30px;
     padding-left: 30px;
     transition: .5s;
-    h2{
+
+    h2 {
         font-family: 'Encode Sans Expanded', sans-serif;
         font-style: normal;
         font-weight: 760;
@@ -102,7 +112,8 @@
         color: #000000;
         padding-bottom: 12px;
     }
-    p{
+
+    p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -110,21 +121,27 @@
         line-height: 17px;
         color: #000000;
         opacity: 0.8;
-    };
+    }
+
+    ;
 }
 
-.serviceworks__choise2:hover{
+.serviceworks__choise2:hover {
     transition: .5s;
     background-color: #000000;
-    h2{
+
+    h2 {
         color: #fafafa;
     }
-    p{
+
+    p {
         color: #fafafa;
-    };
+    }
+
+    ;
 }
 
-.serviceworks__btn{
+.serviceworks__btn {
     width: 132px;
     padding-top: 84px;
 }

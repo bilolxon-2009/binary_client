@@ -32,7 +32,7 @@ function Serviceworks() {
                     </div>
                 </div>
                 <div className={style.serviceworks__btn}>
-                    <MainLink className={style.serviceworks__btnEl} text={"ВОУ!"} link={"#"} />   
+                    <MainLink className={style.serviceworks__btnEl} text={"ВОУ!"} link={"#"} />
                 </div>
             </div>
         </div>
