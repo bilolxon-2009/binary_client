@@ -13,7 +13,7 @@ function Faq({ dark }) {
     let location = useLocation().pathname
 
     useEffect(() => {
-        if (location == "/case") {
+        if (location === "/case") {
             setIdRoute("casefaq")
         } else {
             setIdRoute("faq")
