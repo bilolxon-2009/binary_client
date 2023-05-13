@@ -77,7 +77,7 @@ function Case({ about }) {
     let location = useLocation().pathname
 
     useEffect(() => {
-        if (location == "/case") {
+        if (location === "/case") {
             setIdRoute("caseselection")
         } else {
             setIdRoute("case")
@@ -126,11 +126,11 @@ function Case({ about }) {
                         <div>
                             {
                                 about ? <></>
-                                :
-                                <div className={style.description}>
-                                    <h3>Описание</h3>
-                                    <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
-                                </div>  
+                                    :
+                                    <div className={style.description}>
+                                        <h3>Описание</h3>
+                                        <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
+                                    </div>
                             }
                         </div>
                     </div>
