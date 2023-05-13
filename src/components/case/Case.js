@@ -123,8 +123,17 @@ function Case({ about }) {
                                 :
                                 <></>
                         }
+                        <div>
+                            {
+                                about ? <></>
+                                :
+                                <div className={style.description}>
+                                    <h3>Описание</h3>
+                                    <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
+                                </div>  
+                            }
+                        </div>
                     </div>
-
                 </div>
                 <button className='btns'>{about ? <div><span>О команде</span><img src={medals} alt='Medals' /></div> : <div><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></div>}</button>
 

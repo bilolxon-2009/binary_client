@@ -22,13 +22,15 @@
 .swiper__wrapper {
     position: relative;
 }
-.active__img__wrapper{
-    max-width: 505px;
-    height: 320px;
-    display: grid;
-    place-items: center;
+.active__wrapper{
     position: absolute;
     right: 5%;
+}
+.active__img__wrapper{
+    max-width: 505px;
+    height: 230px;
+    display: grid;
+    place-items: center;
     img{
         width: 400px;
         height: 164px;

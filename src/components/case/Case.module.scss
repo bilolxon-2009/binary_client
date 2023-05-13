@@ -9,7 +9,7 @@
     color: $main-text-color;
     position: relative;
     button {
-        left: 60%;
+        left: 58%;
         bottom: 97px;
         position: absolute;
     }
@@ -24,6 +24,19 @@
         }
     }
 }
-.casefaq{
-    background-color: aliceblue;
+
+.description{
+    font-family: $font-sfpro-regular;
+    margin-top: 10px;
+    max-width: 320px;
+    h3{
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 0.6;
+    }
 }
