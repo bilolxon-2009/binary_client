@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import style from "./PopUp.module.scss"
 import hugging from "../../essets/hugging.svg"
 import man from "../../essets/man.svg"
@@ -26,8 +26,8 @@ const PopUp = () => {
     <div className={style.popUpLayer} >
       <div className={style.popUpHideLayer} onClick={hidePopupWindow}></div>
       <div className={style.popUp} id='popUp'>
-        <img src={xIcon} className={style.backButton} onClick={hidePopupWindow} />
-        <h2 className={style.text}>Начните воплощать мечту <img src={stars} alt="" />
+        <img src={xIcon} className={style.backButton} onClick={hidePopupWindow} alt='back button'/>
+        <h2 className={style.text}>Начните воплощать мечту <img src={stars} alt="emojies" />
           в реальность <img src={man} alt="" /> вместе с нами <img src={hugging} alt="" /></h2>
         <form action="#">
           <div className={style.formNameTaker}><MainInput required type={"text"} placeholder={"Ваше имя*"} />

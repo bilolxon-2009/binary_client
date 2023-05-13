@@ -1,8 +1,10 @@
 @import "../../variables";
 $char-w: 1ch;
-$gap: .2*$char-w;
+$gap: .7*$char-w;
+$gap2: .5*$char-w;
 $n-char: 9;
 $in-w: $n-char*($char-w + $gap);
+$in-w2: $n-char*($char-w + $gap2);
 
 .popUpLayer {
     position: fixed;
@@ -93,7 +95,7 @@ $in-w: $n-char*($char-w + $gap);
                     dimgrey 0, dimgrey $char-w,
                     transparent 0, transparent $char-w + $gap) 0 100%/ #{$in-w - $gap} 2px no-repeat;
                 letter-spacing: $gap;
-                margin-left: 5px;
+                margin-left: 10px;
             }
         }
 
@@ -101,6 +103,8 @@ $in-w: $n-char*($char-w + $gap);
             display: flex;
             top: 165px;
             font-size: 30px;
+    font-family: 'sfpro-regular';
+
         }
 
         .radioTaker {
@@ -120,7 +124,8 @@ $in-w: $n-char*($char-w + $gap);
                 resize: vertical;
                 max-height: 80px;
                 min-height: 33px;
-
+    font-family: 'sfpro-regular';
+                
                 &:focus {
                     border-bottom: 1px solid rgb(12, 12, 12);
                 }
@@ -128,7 +133,8 @@ $in-w: $n-char*($char-w + $gap);
 
             label {
                 color: rgb(0, 0, 0);
-
+    font-family: 'sfpro-regular';
+                  
                 &:hover {
                     color: rgb(136, 136, 136);
                 }
@@ -225,14 +231,19 @@ $in-w: $n-char*($char-w + $gap);
             margin-top: 20px;
             gap: 0px;
             .formNameTaker{
+                width: 100%;
+                overflow: hidden;
                 gap: 20px;
                 height: 150px;
                 .numberInput{
                     font-size: 18px !important;
+                    width: 100%;
                 }
             }
-            .radioTaker{textarea {
-                width: 120%;
+            .radioTaker{
+                width: 100%;
+                textarea {
+                width: 100%;
                 margin-bottom: 0;
             }}
             
@@ -252,9 +263,22 @@ $in-w: $n-char*($char-w + $gap);
         height: 16px;
     }
     form{
+        .formNameTaker{
+            width: 100%;
+                overflow: hidden;
+                .numberInput {
+                    
+                    width: $in-w2;
+                    background: repeating-linear-gradient(90deg,
+                        dimgrey 0, dimgrey $char-w,
+                        transparent 0, transparent $char-w + $gap2) 0 100%/ #{$in-w2 - $gap2} 2px no-repeat;
+                    letter-spacing: $gap;
+                    margin-left: 10px;
+                }
+        }
         .radioTaker{
            textarea{
-  width: 80%;
+  width: 100%;
            } 
            label{
             font-size: 14px;
@@ -263,3 +287,4 @@ $in-w: $n-char*($char-w + $gap);
     }
    }
   }
+  
