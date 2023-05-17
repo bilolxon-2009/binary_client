@@ -5,10 +5,11 @@ import brain from "../../assets/🧠.svg";
 import beauty from "../../assets/⚜️.svg";
 import phone from "../../assets/📱.svg";
 import bomb from "../../assets/💣.svg";
+import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 
 function Serviceworks() {
     return (
-        <div className={style.serviceworks}>
+        <div className={style.serviceworks} id='serviceworks'>
             <div className={style.serviceworks__container}>
                 <div className={style.serviceworks__header}>
                     <h2>Что мы можем вам предложить </h2>
@@ -35,6 +36,7 @@ function Serviceworks() {
                     <MainLink className={style.serviceworks__btnEl} text={"ВОУ!"} link={"#"} />
                 </div>
             </div>
+            <ScrollRoute routeName={"serviceworks"} />
         </div>
     )
 }

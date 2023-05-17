@@ -79,6 +79,8 @@ function Case({ about }) {
     useEffect(() => {
         if (location === "/case") {
             setIdRoute("caseselection")
+        } else if (location === "/service") {
+            setIdRoute("servicecase")
         } else {
             setIdRoute("case")
         }

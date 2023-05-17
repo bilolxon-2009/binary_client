@@ -94,12 +94,10 @@
 
                 transform: translateX(180px);
                 height: 32.5%;
-                transition: 1s;
+                transition: 0.3s;
 
                 // border: 2px solid red;
-                &:hover {
-                    transform: translateX(0);
-                }
+
             }
 
 

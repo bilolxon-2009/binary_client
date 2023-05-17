@@ -63,9 +63,34 @@ function ScrollRoute({ routeName }) {
             nav_title: "Footer",
             route: "casefooter"
         },
+        {
+            id: 12,
+            nav_title: "Banner",
+            route: "servicebanner"
+        },
+        {
+            id: 13,
+            nav_title: "service works",
+            route: "serviceworks"
+        },
+        {
+            id: 14,
+            nav_title: "case",
+            route: "servicecase"
+        },
+        {
+            id: 15,
+            nav_title: "faq",
+            route: "servicefaq"
+        },
+        {
+            id: 16,
+            nav_title: "footer",
+            route: "servicefooter"
+        },
     ];
 
-    // console.log(navData.slice(3, 6))
+    console.log(navData.slice(11, 14))
     useEffect(() => {
         switch (routeName) {
             case "banner":
@@ -116,6 +141,36 @@ function ScrollRoute({ routeName }) {
                 break;
             case "casefooter":
                 setNavRoute(navData.slice(8, 11))
+                setNavIndex(2)
+                // setColor("black")
+                break;
+            case "servicebanner":
+                setNavRoute(navData.slice(11, 14))
+                setNavIndex(0)
+                // setColor("black")
+                break;
+            case "serviceworks":
+                setNavRoute(navData.slice(11, 14))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "servicecase":
+                setNavRoute(navData.slice(12, 15))
+                setNavIndex(1)
+                // setColor("black")
+                break;
+            case "servicefaq":
+                setNavRoute(navData.slice(13, 16))
+                setNavIndex(1)
+                setColor("black")
+                break;
+            case "servicefaq":
+                setNavRoute(navData.slice(13, 16))
+                setNavIndex(2)
+                // setColor("black")
+                break;
+            case "servicefooter":
+                setNavRoute(navData.slice(13, 16))
                 setNavIndex(2)
                 // setColor("black")
                 break;

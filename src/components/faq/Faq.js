@@ -15,6 +15,8 @@ function Faq({ dark }) {
     useEffect(() => {
         if (location === "/case") {
             setIdRoute("casefaq")
+        } else if (location === "/service") {
+            setIdRoute("servicefaq")
         } else {
             setIdRoute("faq")
         }

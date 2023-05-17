@@ -14,6 +14,8 @@ const Footer = () => {
   useEffect(() => {
     if (location === "/case") {
       setIdRoute("casefooter")
+    } else if (location === "/service") {
+      setIdRoute("servicefooter")
     } else {
       setIdRoute("footer")
     }
@@ -58,53 +60,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className={style.footer__container_2}>
-          <div className={style.footer__c2_left}>
-            <span>0101101011010101101</span>
-            <br />
-            <span style={{ "opacity": '55%' }}>110010101010101</span>
-            <br />
-            <span style={{ "opacity": '40%' }}>01100101011011001101101010</span>
-            <br />
-            <span style={{ "opacity": '55%' }}>1100101010101</span>
-            <br />
-            <span>01100101011010101001101</span>
-            <br />
-            <span style={{ "opacity": '40%' }}>110010011001010110</span>
-            <br />
-            <span>11001011001101010101</span>
-            <br />
-            <span>011001010110</span>
-            <br />
-            <span>110010100110101010101</span>
-          </div>
-          <div className={style.footer__conclusion}>
-            Начните воплощать мечту <img className={style.conclusion_starts} src={stars} alt="" />
-            <br />
-            в реальность <img className={style.conclusion_man} src={man} alt="" /> в
-            месте с нами
-          </div>
-          <div className={style.footer__c2_right}>
-            <span> 0101101011010101101</span>
-            <br />
-            <span style={{ "opacity": '55%' }}> 110010101010101</span>
-            <br />
-            <span style={{ "opacity": '40%' }}> 01100101011011001101101010</span>
-            <br />
-            <span style={{ "opacity": '55%' }}> 1100101010101</span>
-            <br />
-            <span> 01100101011010101001101</span>
-            <br />
-            <span style={{ "opacity": '40%' }}> 110010011001010110</span>
-            <br />
-            <span>11001011001101010101</span>
-            <br />
-            <span> 011001010110</span>
-            <br />
-            <span> 110010100110101010101</span>
-          </div>
+        <div className={style.footer__conclusion}>
+          Начните воплощать мечту <img className={style.conclusion_starts} src={stars} alt="" />
+          <br />
+          в реальность <img className={style.conclusion_man} src={man} alt="" /> в
+          месте с нами
         </div>
+
+
         <ScrollRoute routeName={idRoute} />
       </Container>
 
