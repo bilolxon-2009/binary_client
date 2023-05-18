@@ -3,8 +3,9 @@ import style from "./Case.module.scss"
 import family from '../../essets/family.svg'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
-import { Mousewheel } from "swiper";
+import { Mousewheel, Navigation, Keyboard } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
 import "./styles.scss";
 import medals from '../../essets/medals.svg'
 import house from '../../assets/house.svg'
@@ -18,55 +19,64 @@ import euro from '../../assets/euro.svg'
 import beauty from '../../assets/beauty.svg'
 import billiard from '../../assets/billiard.svg'
 import scientist from '../../assets/scientist.svg'
-import { Container } from '../../utils/Components';
 import { useLocation } from 'react-router-dom';
+import { MainLink } from '../../utils/Components';
+
 
 const data = [
     {
         "id": 1,
         "name": "Talia",
-        "image": talia
-
+        "image": talia,
+        "description": "Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке"
     },
     {
         "id": 2,
         "name": "Brandon Blackwood",
-        "image": black
+        "image": black,
+        "description": "description"
     },
     {
         "id": 3,
         "name": "Alastin",
-        "image": alastin
+        "image": alastin,
+        "description": "description"
     },
     {
         "id": 4,
         "name": "Mold",
-        "image": mold
+        "image": mold,
+        "description": "description"
     },
     {
         "id": 5,
         "name": "Geeni",
-        "image": geeni
+        "image": geeni,
+        "description": "description"
     },
     {
         "id": 6,
         "name": "Beautyrest",
-        "image": beauty
+        "image": beauty,
+        "description": "description"
     },
     {
         "id": 7,
         "name": "EuroTruckService",
-        "image": euro
+        "image": euro,
+        "description": "description"
     },
     {
         "id": 8,
         "name": "Alastin",
-        "image": alastin
+        "image": alastin,
+        "description": "description"
     },
     {
         "id": 9,
         "name": "Geeni",
-        "image": geeni
+        "image": geeni,
+        "description": "description"
     }
 
 ]
@@ -87,9 +97,9 @@ function Case({ about }) {
     }, [location])
     return (
         <div className={style.case} id={idRoute}>
-            <Container>
-                <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard' /> </h2>}</div>
-                <div className='swiper__wrapper'>
+            <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard' /> </h2>}</div>
+            <div className={style.case__child}>
+                <div>
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={8}
@@ -109,38 +119,67 @@ function Case({ about }) {
                                                 : { opacity: "0.5" }}
                                         onClick={() => setActiveTextIndex(index)}
                                         key={index}
+                                        className='swiper__laptop'
                                     >
-                                        {i.name} <div className='line'>
-                                        </div></SwiperSlide>
+                                        {i.name} <div className='line'></div>
+                                    </SwiperSlide>
                                 ))
                                 :
                                 <></>
                         }
                     </Swiper>
-                    <div className='active__wrapper'>
-                        {
-                            data ?
-                                <div className='active__img__wrapper'>
-                                    <img src={data[activeTextIndex].image} alt="" />
+                </div>
+                <div className={style.active__wrapper}>
+                    {
+                        data ?
+                            <div className={style.active__img__wrapper}>
+                                <img src={data[activeTextIndex].image} alt="" />
+                                <div className={style.description}>
+                                    <h3>Описание</h3>
+                                    <p>{data[activeTextIndex].description}</p>
                                 </div>
-                                :
-                                <></>
+                            </div>
+                            :
+                            <></>
+                    }
+                    <div className={style.btn__wrapper}>
+                        {
+                            about ?
+                                <MainLink text={"О команде"} icon={medals} link={"#"} />
+                                : <MainLink text={"Посмотреть эту работу"} icon={scientist} link={"#"} />
                         }
-                        <div>
-                            {
-                                about ? <></>
-                                    :
-                                    <div className={style.description}>
-                                        <h3>Описание</h3>
-                                        <p>Эстетичная пиццерия в стиле испанской ценности в Нью-Йорке</p>
-                                    </div>
-                            }
-                        </div>
                     </div>
                 </div>
-                <button className='btns'>{about ? <div><span>О команде</span><img src={medals} alt='Medals' /></div> : <div><span>Посмотреть эту работу</span><img src={scientist} alt='scientist' /></div>}</button>
-
-            </Container>
+            </div>
+            <div className={style.case__child__mobile}>
+                <Swiper
+                    cssMode={true}
+                    navigation={true}
+                    pagination={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    modules={[Navigation, Mousewheel, Keyboard]}
+                    className="mySwiper"
+                >
+                    {
+                        data.map((c) => (
+                            <SwiperSlide>
+                                <div className='mobile__swiper__card'>
+                                    <img src={c.image} alt="" />
+                                    <p>{c.description}</p>
+                                </div>
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+                <div className={style.btn__wrapper}>
+                        {
+                            about ?
+                                <MainLink text={"О команде"} icon={medals} link={"#"} />
+                                : <MainLink text={"Посмотреть эту работу"} icon={scientist} link={"#"} />
+                        }
+                </div>
+            </div>
             <ScrollRoute routeName={idRoute} />
         </div>
     )
