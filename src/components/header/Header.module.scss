@@ -15,6 +15,7 @@
   z-index: 10000;
   transition: $transition-time;
 
+
   &.headerActive {
     background-color: $main-theme-white;
     color: $main-theme-dark;
