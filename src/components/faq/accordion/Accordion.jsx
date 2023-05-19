@@ -3,7 +3,6 @@ import './Accordion.scss'
 
 const Accordion = ({ title, content, id, isActive, selectActive }) => {
 
-  console.log(isActive)
   return (
     <div className='accordion__item'>
       <div className='accordion__title' onClick={() => selectActive(id)}>

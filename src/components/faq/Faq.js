@@ -12,7 +12,6 @@ function Faq({ dark }) {
     const [idRoute, setIdRoute] = useState("faq")
     let location = useLocation().pathname;
     const [isActive, setIsActive] = useState(0);
-
     useEffect(() => {
         if (location === "/case") {
             setIdRoute("casefaq")
@@ -24,7 +23,12 @@ function Faq({ dark }) {
     }, [location])
 
     const SelectActive = (id) => {
-        setIsActive(id)
+        if (isActive === id) {
+            setIsActive(0)
+        } else {
+            setIsActive(id)
+        }
+
 
     }
 
