@@ -8,6 +8,7 @@
     color: $main-theme-dark;
 }
 .faq {
+    padding: 97px 130px;
     width: 100%;
     min-height: 100vh;
     font-family: $font-sfpro-bold;
@@ -40,24 +41,20 @@
 .accordion {
     font-family: $font-sfpro-regular;
     cursor: pointer;
-    overflow-y: auto;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 30px;
     min-height: 246px;
-    width: 420px;
+    max-width: 420px;
 }
 
 .accordion::-webkit-scrollbar {
     display: none;
 }
 
-
 @media only screen and (max-width: 768px) {
     .faq {
         padding: 20px;
-
         button {
             right: 30%;
             margin-left: 100px;
@@ -67,5 +64,8 @@
     .faq__child {
         flex-direction: column;
         align-items: center;
+        h2{
+            text-align: center;
+        }
     }
 }
