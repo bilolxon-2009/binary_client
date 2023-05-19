@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from "./Header.module.scss";
 import logo from "../../assets/logo.svg"
 import { Link } from 'react-router-dom';
 // Please use CSS module
 
 const Header = () => {
-  const [scrollState, setScrollState] = useState(0)
 
-  const ScrollFunc = () => {
-    setScrollState(window.scrollY)
-  }
 
-  window.addEventListener("scroll", ScrollFunc)
   return (
     <div className={`${styles.header} `} >
       <div className={styles.logo}>
