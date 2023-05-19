@@ -24,8 +24,12 @@ function Faq({ dark }) {
     }, [location])
 
     const SelectActive = (id) => {
-        setIsActive(id)
+        if (isActive === id) {
+            setIsActive(0)
 
+        } else {
+            setIsActive(id)
+        }
     }
 
     return (
