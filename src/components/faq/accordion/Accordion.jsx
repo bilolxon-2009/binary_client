@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Accordion.scss'
 
-const Accordion = ({ title, content }) => {
-  const [isActive, setIsActive] = useState(false);
+const Accordion = ({ title, content, id, isActive, selectActive }) => {
 
+  console.log(isActive)
   return (
     <div className='accordion__item'>
-      <div className='accordion__title' onClick={() => setIsActive(!isActive)}>
+      <div className='accordion__title' onClick={() => selectActive(id)}>
         <div>{title}</div>
-        <div>{isActive ? '-' : '+'}</div>
+        <div>{isActive === id ? '-' : '+'}</div>
       </div>
-      <div className={`answer__wrapper ${isActive ? "open" : "" }`}>
+      <div className={`answer__wrapper ${isActive === id ? "open" : "close"}`}>
         <div className='answer'>{content}</div>
       </div>
       <div className='line'></div>

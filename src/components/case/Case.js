@@ -163,7 +163,7 @@ function Case({ about }) {
                 >
                     {
                         data.map((c) => (
-                            <SwiperSlide>
+                            <SwiperSlide key={c.id}>
                                 <div className='mobile__swiper__card'>
                                     <img src={c.image} alt="" />
                                     <p>{c.description}</p>
@@ -173,11 +173,11 @@ function Case({ about }) {
                     }
                 </Swiper>
                 <div className={style.btn__wrapper}>
-                        {
-                            about ?
-                                <MainLink text={"О команде"} icon={medals} link={"#"} />
-                                : <MainLink text={"Посмотреть эту работу"} icon={scientist} link={"#"} />
-                        }
+                    {
+                        about ?
+                            <MainLink text={"О команде"} icon={medals} link={"#"} />
+                            : <MainLink text={"Посмотреть эту работу"} icon={scientist} link={"#"} />
+                    }
                 </div>
             </div>
             <ScrollRoute routeName={idRoute} />

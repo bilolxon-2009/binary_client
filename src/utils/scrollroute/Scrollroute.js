@@ -90,7 +90,7 @@ function ScrollRoute({ routeName }) {
         },
     ];
 
-    console.log(navData.slice(11, 14))
+    // console.log(navData.slice(11, 14))
     useEffect(() => {
         switch (routeName) {
             case "banner":

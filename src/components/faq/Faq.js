@@ -10,7 +10,8 @@ import { MainLink } from '../../utils/Components';
 
 function Faq({ dark }) {
     const [idRoute, setIdRoute] = useState("faq")
-    let location = useLocation().pathname
+    let location = useLocation().pathname;
+    const [isActive, setIsActive] = useState(0);
 
     useEffect(() => {
         if (location === "/case") {
@@ -22,19 +23,23 @@ function Faq({ dark }) {
         }
     }, [location])
 
+    const SelectActive = (id) => {
+        setIsActive(id)
+
+    }
 
     return (
         <div className={`${dark ? style.faq__dark : style.faq__light}`} id={idRoute}>
             <div className={style.faq}>
-                    <div className={style.faq__child}>
-                        <h2>Имея при себе много опыта, мы можем помочь в процветании <u>вашего</u> <img src={finger} alt='finger' /> бизнеса</h2>
-                        <div className={style.accordion}>
-                            {accordionData.map(({ title, content, id }) => (
-                                <Accordion title={title} content={content} key={id} />
-                            ))}
-                        </div>
-                    </div> 
-                    {dark ? <MainLink text={"Оставить заявку"} icon={message}/> : <MainLink text={"Наше расположение"}/>}
+                <div className={style.faq__child}>
+                    <h2>Имея при себе много опыта, мы можем помочь в процветании <u>вашего</u> <img src={finger} alt='finger' /> бизнеса</h2>
+                    <div className={style.accordion}>
+                        {accordionData.map(({ title, content, id }) => (
+                            <Accordion title={title} isActive={isActive} id={id} selectActive={SelectActive} content={content} key={id} />
+                        ))}
+                    </div>
+                </div>
+                {dark ? <MainLink text={"Оставить заявку"} icon={message} /> : <MainLink text={"Наше расположение"} />}
                 <ScrollRoute routeName={idRoute} />
             </div>
         </div>
