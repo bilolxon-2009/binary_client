@@ -25,17 +25,11 @@ function Faq({ dark }) {
     const SelectActive = (id) => {
         if (isActive === id) {
             setIsActive(0)
-<<<<<<< HEAD
         } else {
             setIsActive(id)
         }
 
-=======
->>>>>>> origin/jaloliddin
 
-        } else {
-            setIsActive(id)
-        }
     }
 
     return (
