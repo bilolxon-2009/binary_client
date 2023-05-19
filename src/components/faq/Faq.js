@@ -6,6 +6,7 @@ import message from '../../essets/message.svg'
 import finger from '../../essets/finger.svg'
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import { useLocation } from 'react-router-dom';
+import { MainLink } from '../../utils/Components';
 
 function Faq({ dark }) {
     const [idRoute, setIdRoute] = useState("faq")
@@ -32,8 +33,8 @@ function Faq({ dark }) {
                                 <Accordion title={title} content={content} key={id} />
                             ))}
                         </div>
-                    </div>
-                    <button className='btns'>{dark ? <div><span>Оставить заявку</span><img src={message} alt='Message' /></div> : <span>Наше расположение</span>}</button>
+                    </div> 
+                    {dark ? <MainLink text={"Оставить заявку"} icon={message}/> : <MainLink text={"Наше расположение"}/>}
                 <ScrollRoute routeName={idRoute} />
             </div>
         </div>
