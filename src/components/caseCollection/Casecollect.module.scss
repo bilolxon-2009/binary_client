@@ -323,6 +323,212 @@
     }
 }
 
+@media only screen and (max-width:678px) {
+    .casecolection {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        gap: 65px;
+        position: relative;
+        // justify-content: space-evenly;
+    }
+
+    .collectionAll {
+        width: 100%;
+        animation: banner 25s linear alternate infinite forwards;
+    }
+
+    .womenPic {
+        grid-area: women1;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .womenPic2 {
+        grid-area: women2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .cameraPic {
+        grid-area: camera;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .geeniPic {
+        grid-area: geeni;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .aromaPic {
+        grid-area: aroma;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaPic {
+        margin-top: -30px;
+        grid-area: piza;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .starbuckPic {
+        grid-area: starbuck;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .starbuckLittlePic {
+        grid-area: starbuck2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .womenTonguePic {
+        grid-area: womenT;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .startbuckLargePic {
+        grid-area: starbuck3;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .geeniPic2 {
+        grid-area: geeni2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaLittlePic {
+        grid-area: piza2;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .cameraPic2 {
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .pizaPic2 {
+        width: auto;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .collectionBanner {
+        height: auto;
+        width: 100%;
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "women1 women1  women2 women2 women2   camera camera camera"
+            "women1 women1  geeni geeni geeni camera camera camera"
+            "women1 women1 geeni geeni geeni aroma aroma aroma"
+            " piza piza piza piza piza aroma aroma aroma"
+            " piza piza piza piza piza  starbuck starbuck starbuck"
+            " starbuck2 starbuck2   womenT womenT womenT    starbuck starbuck starbuck "
+            " starbuck2 starbuck2   womenT womenT womenT    starbuck3 starbuck3 starbuck3"
+            "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+            "geeni2 geeni2 geeni2  piza2  piza2   starbuck3 starbuck3 starbuck3"
+        ;
+    }
+
+    .collectionBanner2 {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+}
+
+@keyframes banner {
+    from {
+        margin-top: 0;
+    }
+
+    to {
+        margin-top: calc(-1000px + 100vh)
+    }
+}
+
 // @media only screen and (max-width:678px) {
 //     .casecolection {
 //         width: 100%;
