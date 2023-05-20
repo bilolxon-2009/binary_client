@@ -11,10 +11,13 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 10000;
   transition: $transition-time;
 
+  button {
+    display: none;
+  }
 
   &.headerActive {
     background-color: $main-theme-white;
@@ -59,12 +62,62 @@
   .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #fff;
+
+    cursor: pointer;
 
     h1 {
       letter-spacing: 5px;
       margin-left: 12px;
       font-size: 18px;
 
+    }
+  }
+}
+
+@media only screen and (max-width:956px) {
+  .header {
+    background: #000;
+    display: flex;
+    width: 100%;
+    padding: 0;
+
+    button {
+      display: flex;
+      position: absolute;
+
+      background: none;
+      border: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+
+      img {
+        left: 24px;
+      }
+
+      &:active {
+        border: 2px solid white;
+
+      }
+    }
+
+    ul {
+      display: none;
+    }
+
+    .logo {
+      margin: auto;
+      display: flex;
+      align-items: center;
+
+      // width: 100%;
+      // border: 2px solid wheat;
+      h1 {
+        font-size: 24px;
+        margin-top: 5px;
+
+      }
     }
   }
 }

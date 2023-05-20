@@ -12,7 +12,6 @@ import PopUp from '../../components/popUp/PopUp';
 function Home() {
     return (
         <div style={styles}>
-            {/* <Header /> */}
             <Banner />
             <Video />
             <Case about={true} />

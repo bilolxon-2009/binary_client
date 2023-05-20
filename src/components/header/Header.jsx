@@ -3,16 +3,19 @@ import styles from "./Header.module.scss";
 import logo from "../../assets/logo.svg"
 import { Link } from 'react-router-dom';
 // Please use CSS module
-
+import bars from "../../assets/bars_icon.svg"
 const Header = () => {
 
 
   return (
     <div className={`${styles.header} `} >
-      <div className={styles.logo}>
+      <button>
+        <img src={bars} alt="" />
+      </button>
+      <a href='/' className={styles.logo}>
         <img src={logo} alt="" />
         <h1>BINARY</h1>
-      </div>
+      </a>
 
       <ul>
         <li>

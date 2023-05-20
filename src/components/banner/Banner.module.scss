@@ -22,6 +22,7 @@
         line-height: 50px;
         color: white;
         position: relative;
+        font-family: $font-sfpro-bold;
     }
 
     &>img {
@@ -36,5 +37,40 @@
 
     &>a {
         margin-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width:956px) {
+    .banner {
+        background-image: url("../../assets/media_banner.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // padding: 0;
+
+        &>img {
+            display: none;
+        }
+
+        .text {
+            font-size: 24px;
+            text-align: center;
+            line-height: 28px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                height: 24px;
+            }
+
+
+        }
+
+        &>a {
+            margin: auto;
+            margin-bottom: 70px;
+
+        }
+
     }
 }
