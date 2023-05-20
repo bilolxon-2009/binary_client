@@ -336,7 +336,7 @@
 
     .collectionAll {
         width: 100%;
-        animation: banner 25s linear alternate infinite forwards;
+        animation: banner 15s linear alternate infinite forwards;
     }
 
     .womenPic {
@@ -395,7 +395,7 @@
     }
 
     .pizaPic {
-        margin-top: -30px;
+        margin-top: 0px;
         grid-area: piza;
         width: auto;
         height: auto;
@@ -517,15 +517,15 @@
         height: auto;
         gap: 10px;
     }
-}
 
-@keyframes banner {
-    from {
-        margin-top: 0;
-    }
+    @keyframes banner {
+        from {
+            margin-top: 0;
+        }
 
-    to {
-        margin-top: calc(-1000px + 100vh)
+        to {
+            margin-top: calc(-1000px + 100vh)
+        }
     }
 }
 
