@@ -124,3 +124,57 @@
         margin-bottom: 70px;
     }
 }
+
+@media only screen and (max-width:956px) {
+    .casebanner {
+        padding-left: 50px;
+        padding-right: 50px;
+        overflow: hidden;
+
+        .casebanner_text {
+            font-size: 24px;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-left: 10px;
+            }
+        }
+
+        .casebanner_cards {
+            // display: none;
+            height: 40%;
+            top: 20%;
+            transform: rotate(25deg);
+            right: -100px;
+
+            .casebanner_cards_wrap {
+
+                .casebanner_card {
+                    width: 159px;
+
+                    img {
+                        width: 70%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .casebanner_card {
+                        border: 2px solid black;
+
+                    }
+                }
+            }
+        }
+
+        &>a {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 70px;
+
+        }
+    }
+}
