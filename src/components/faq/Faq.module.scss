@@ -32,7 +32,7 @@
         }
     }
 
-    button {
+    .faq__btn__wrapper {
         position: absolute;
         bottom: 60px;
     }
@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    min-height: 246px;
+    height: 392px;
     max-width: 420px;
 }
 
@@ -54,8 +54,8 @@
 
 @media only screen and (max-width: 768px) {
     .faq {
-        padding: 20px;
-        button {
+        padding: 127px 19px;
+        .faq__btn__wrapper {
             right: 30%;
             margin-left: 100px;
         }
@@ -67,5 +67,8 @@
         h2{
             text-align: center;
         }
+    }
+    .accordion{
+        margin: 82px 0 0 0;
     }
 }
