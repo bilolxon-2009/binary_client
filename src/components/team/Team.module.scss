@@ -3,6 +3,7 @@
 .team {
     width: 100%;
     min-height: 100vh;
+
     border: 2px solid blue;
     box-sizing: border-box;
     position: relative;
@@ -261,5 +262,160 @@
             width: 60%;
         }
 
+    }
+}
+
+@media only screen and (max-width:956px) {
+    .team {
+
+        .team_right {
+            display: none !important;
+        }
+
+        .team_left {
+            display: none;
+        }
+
+        .team_footer {
+            display: none !important;
+
+        }
+
+        .team_container {
+            height: 90vh;
+
+
+            .team_media_container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 2px solid red;
+                height: 100%;
+
+                h1 {
+                    margin-top: 50px;
+
+                }
+
+                .team_media_collection {
+                    border: 2px solid red;
+                    // padding-top: 20px;
+                    // padding-bottom: 20px;
+                    height: 390px;
+                    overflow-y: scroll;
+
+
+
+                    .team_media_items {
+                        border: 1px solid black;
+                        width: 100%;
+                        height: 83px;
+                        display: flex;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+
+
+                        .team_media_item1 {
+                            flex: .2;
+                            height: 100%;
+
+                            &>img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .team_media_item2 {
+                            flex: .5;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .team_media_item2_text {
+                                width: 100%;
+                                height: calc(50% - 1px);
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                                border-bottom: 1px solid black;
+
+                                h1 {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                            }
+
+                            .team_media_item2_imgs {
+                                height: 50%;
+                                width: 90%;
+                                display: flex;
+                                align-items: center;
+                                margin: auto;
+
+                                img {
+                                    width: 50%;
+
+                                    &:nth-child(2) {
+                                        height: 30%;
+                                        // border: 2px solid red;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                        .team_media_item3 {
+                            flex: .2;
+                            // border: 2px solid black;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            img {
+                                width: 100%;
+                                height: 50%;
+                                object-position: center;
+
+                                // margin: auto;
+
+                                &:nth-child(1) {
+                                    height: 50%;
+                                    background-color: black;
+                                    object-fit: contain;
+
+
+                                }
+
+                                &:nth-child(2) {
+                                    object-fit: cover;
+                                }
+
+                            }
+                        }
+
+                        .team_media_item4 {
+                            flex: .2;
+                            display: flex;
+                            background-color: black;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100%;
+
+                        }
+                    }
+
+
+                }
+
+                .team_btnWrap {
+                    margin-top: 100px;
+                }
+            }
+        }
     }
 }
