@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from "./Casebanner.module.scss"
 import { MainLink } from '../../utils/Components'
 import suitecase from "../../essets/suitcase.svg"
@@ -15,6 +15,8 @@ import { gsap } from 'gsap';
 import { Link } from 'react-router-dom'
 
 function Casebanner() {
+    const [screenview, setscreenview] = useState("0px")
+
     const div1 = useRef(null);
     const div2 = useRef(null);
     const div3 = useRef(null);
@@ -22,6 +24,8 @@ function Casebanner() {
     const div5 = useRef(null);
     const div6 = useRef(null);
     const div7 = useRef(null);
+
+
     useEffect(() => {
         const el1 = div1.current;
         gsap.fromTo(el1, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.1, opacity: 1 });
@@ -30,20 +34,32 @@ function Casebanner() {
         gsap.fromTo(el2, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.2, opacity: 1 });
 
         const el3 = div3.current;
-        gsap.fromTo(el3, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.3, opacity: 1 });
+        gsap.fromTo(el3, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.3, opacity: 1 });
 
         const el4 = div4.current;
-        gsap.fromTo(el4, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.4, opacity: 1 });
+        gsap.fromTo(el4, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.4, opacity: 1 });
 
         const el5 = div5.current;
-        gsap.fromTo(el5, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.5, opacity: 1 });
+        gsap.fromTo(el5, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.5, opacity: 1 });
 
         const el6 = div6.current;
         gsap.fromTo(el6, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.6, opacity: 1 });
 
         const el7 = div7.current;
         gsap.fromTo(el7, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.7, opacity: 1 });
-    }, []);
+    }, [screenview]);
+    useEffect(() => {
+        const screenSize = () => {
+            if (window.screen.width < 956) {
+                setscreenview("-90px")
+            } else {
+                setscreenview("200px")
+            }
+        }
+        setTimeout(() => screenSize(), 500)
+    }, [])
+    console.log(screenview);
+
     return (
         <div className={styles.casebanner} id='casebanner'>
             <div className={styles.casebanner_text}>
