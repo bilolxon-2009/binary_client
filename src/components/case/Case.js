@@ -153,6 +153,8 @@ function Case({ about }) {
             </div>
             <div className={style.case__child__mobile}>
                 <Swiper
+                    slidesPerView={1.2}
+                    spaceBetween={2}
                     cssMode={true}
                     navigation={true}
                     pagination={true}
@@ -164,9 +166,11 @@ function Case({ about }) {
                     {
                         data.map((c) => (
                             <SwiperSlide key={c.id}>
+                                <div className='swiper-card-wrapper'>
                                 <div className='mobile__swiper__card'>
                                     <img src={c.image} alt="" />
                                     <p>{c.description}</p>
+                                </div>
                                 </div>
                             </SwiperSlide>
                         ))
