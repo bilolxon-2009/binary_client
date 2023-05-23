@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'
 
 function Casebanner() {
     const [screenview, setscreenview] = useState("0px")
-
+    console.log(screenview)
     const div1 = useRef(null);
     const div2 = useRef(null);
     const div3 = useRef(null);
@@ -25,7 +25,8 @@ function Casebanner() {
     const div6 = useRef(null);
     const div7 = useRef(null);
 
-
+    let screenSize = window.screen.width
+    console.log(screenSize)
     useEffect(() => {
         const el1 = div1.current;
         gsap.fromTo(el1, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.1, opacity: 1 });
@@ -34,31 +35,31 @@ function Casebanner() {
         gsap.fromTo(el2, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.2, opacity: 1 });
 
         const el3 = div3.current;
-        gsap.fromTo(el3, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.3, opacity: 1 });
+        gsap.fromTo(el3, { translateX: "200px" }, { translateX: screenSize > 956 ? "-90px" : "0px", transitionDelay: 0.3, opacity: 1 });
 
         const el4 = div4.current;
-        gsap.fromTo(el4, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.4, opacity: 1 });
+        gsap.fromTo(el4, { translateX: "200px" }, { translateX: screenSize > 956 ? "-90px" : "0px", transitionDelay: 0.4, opacity: 1 });
 
         const el5 = div5.current;
-        gsap.fromTo(el5, { translateX: "200px" }, { translateX: screenview, transitionDelay: 0.5, opacity: 1 });
+        gsap.fromTo(el5, { translateX: "200px" }, { translateX: screenSize > 956 ? "-90px" : "0px", transitionDelay: 0.5, opacity: 1 });
 
         const el6 = div6.current;
         gsap.fromTo(el6, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.6, opacity: 1 });
 
         const el7 = div7.current;
         gsap.fromTo(el7, { translateX: "200px" }, { translateX: "0", transitionDelay: 0.7, opacity: 1 });
-    }, [screenview]);
+    }, []);
     useEffect(() => {
-        const screenSize = () => {
-            if (window.screen.width < 956) {
+        const screen = () => {
+
+            if (screenSize < 956) {
                 setscreenview("-90px")
             } else {
                 setscreenview("200px")
             }
         }
-        setTimeout(() => screenSize(), 500)
+        window.addEventListener("load", () => setTimeout(() => screen, 1000))
     }, [])
-    console.log(screenview);
 
     return (
         <div className={styles.casebanner} id='casebanner'>

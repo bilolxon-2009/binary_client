@@ -15,7 +15,7 @@
   z-index: 10000;
   transition: $transition-time;
 
-  button {
+  &>button {
     display: none;
   }
 
@@ -43,7 +43,14 @@
     gap: 30px;
     margin-right: 200px;
 
+    .header_language {
+      position: relative;
+      margin-right: 40px;
+      margin-top: -5px;
+    }
+
     li {
+      position: relative;
 
       a {
         color: $main-text-color;

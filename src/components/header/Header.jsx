@@ -4,8 +4,12 @@ import logo from "../../assets/logo.svg"
 import { Link } from 'react-router-dom';
 // Please use CSS module
 import bars from "../../assets/bars_icon.svg"
+import Language from '../../utils/laguage/Language';
+import { useTranslation } from 'react-i18next';
+
 const Header = () => {
 
+  const { t } = useTranslation();
 
   return (
     <div className={`${styles.header} `} >
@@ -15,31 +19,37 @@ const Header = () => {
       <a href='/' className={styles.logo}>
         <img src={logo} alt="" />
         <h1>BINARY</h1>
+
       </a>
 
-      <ul>
+      <ul><div className={styles.header_language}>
+        <Language />
+      </div>
+
         <li>
           <Link to={"/"}>
-            О нас
+            {t("aboutus")}
           </Link>
         </li>
         <li>
           <Link to={"case"}>
-            Кейсы
+            {t("case")}
           </Link>
         </li>
         <li>
           <Link to={"service"}>
-            Услуги
+            {t("service")}
           </Link>
         </li>
         <li>
           <Link to={"contact"}>
-            Контакты
+            {t("contact")}
           </Link>
         </li>
 
+
       </ul>
+
     </div>
   )
 }
