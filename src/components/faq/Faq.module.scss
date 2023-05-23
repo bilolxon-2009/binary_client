@@ -66,9 +66,23 @@
         align-items: center;
         h2{
             text-align: center;
+            font-size: 28px !important;
+            img{
+                width: 24px !important; 
+            }
         }
     }
     .accordion{
         margin: 82px 0 0 0;
+    }
+}
+@media only screen and (max-width: 375px){
+    .faq__child{
+        h2{
+            font-size: 20px !important;
+            img{
+                width: 18px !important;
+            }
+        }
     }
 }

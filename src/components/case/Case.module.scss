@@ -8,6 +8,7 @@
     box-sizing: border-box;
     padding: 97px 130px;
     color: $main-text-color;
+    position: relative;
     .title {
         font-size: 32px;
         font-weight: 600;
@@ -83,8 +84,15 @@
 }
 @media only screen and (max-width: 768px){
     .case{
-        padding: 127px 14px;
+        padding: 127px 0;
         text-align: center;
+        .title{
+            font-size: 28px;
+            margin: 0 14px;
+            img{
+                width: 18px;
+            }
+        }
     }
     .case__child{
         display: none;
@@ -98,5 +106,12 @@
     }
     .btn__wrapper{
         margin: 60px 0 0 0;
+    }
+}
+@media only screen and (max-width: 375px){
+    .case{
+        .title{
+            font-size: 20px;
+        }
     }
 }
