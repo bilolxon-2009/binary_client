@@ -8,8 +8,11 @@ import man from "../../essets/man.svg"
 import { MainLink } from '../../utils/Components'
 import Scrollroute from '../../utils/scrollroute/Scrollroute'
 import backgroundVideo_mobile from "../../essets/bgVideo_mobile.mp4"
+import { useTranslation } from 'react-i18next'
+
 
 function Video() {
+    const { t } = useTranslation()
     return (
         <div className={style.video} id='video'>
             <ReactPlayer
@@ -19,7 +22,7 @@ function Video() {
                 loop
                 url={backgroundVideo}
             />
-             <ReactPlayer
+            <ReactPlayer
                 className={style.backgroundVideoMobile}
                 playing
                 muted
@@ -27,10 +30,10 @@ function Video() {
                 url={backgroundVideo_mobile}
             />
             <div className={style.videoPartSections}>
-                <h2>Мы верим, что человек <img src={smilyIcon} alt='emojies' />, бизнес <img src={man} alt='emojies' /> и государство ⚔️ нуждаются в качественном опыте взаимодействии. </h2>
+                <h2>{t("videoHead1")} <img src={smilyIcon} alt='emojies' />, {t("videoHead2")} <img src={man} alt='emojies' /> {t("videoHead3")}</h2>
                 <div className={style.videoBottomPart}>
-                    <h3>Мы помогаем разрабатывать продукты, которые уже сегодня создают такой опыт</h3>
-                    <MainLink text="Наш кейс" icon={suitcase} link="#" className={style.button} />
+                    <h3>{t("videoText")} </h3>
+                    <MainLink text={t("videoBtn")} icon={suitcase} link="#" className={style.button} />
                 </div>
             </div>
             <Scrollroute routeName={"video"} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import style from "./Casecollect.module.scss"
 import aroma from "./assets/aroma.png"
 import camera from "./assets/camera.png"
@@ -15,6 +16,7 @@ import { MainLink } from "../../utils/Components"
 import ScrollRoute from '../../utils/scrollroute/Scrollroute'
 
 function Casecollection() {
+    const { t } = useTranslation()
     return (
 
         <div className={style.casecolection} id='casecollection'>
@@ -43,12 +45,12 @@ function Casecollection() {
 
             <div className={style.bannerText}>
                 <div>
-                    <h3>Смотри, что мы делаем каждый день!</h3>
-                    <p>Bu yerda qo'shimcha description text yoziladi.</p>
+                    <h3>{t("collectionHead")}</h3>
+                    <p>{t("collectionText")}</p>
                 </div>
                 <div>
-                    <h3>Делаем и могём!</h3>
-                    <MainLink text="Все ещё мало?" link="#" className={style.collectionBtn} />
+                    <h3>{t("collectionExtra")}</h3>
+                    <MainLink text={t("collectionBtn")} link="#" className={style.collectionBtn} />
                 </div>
             </div>
             <ScrollRoute routeName={"casecollection"} />
