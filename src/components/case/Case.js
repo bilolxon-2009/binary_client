@@ -43,15 +43,15 @@ const data = [
         "description": "description"
     },
     {
-        "id": 4,
-        "name": "Mold",
-        "image": mold,
-        "description": "description"
-    },
-    {
         "id": 5,
         "name": "Geeni",
         "image": geeni,
+        "description": "description"
+    },
+    {
+        "id": 4,
+        "name": "Mold",
+        "image": mold,
         "description": "description"
     },
     {
@@ -65,20 +65,7 @@ const data = [
         "name": "EuroTruckService",
         "image": euro,
         "description": "description"
-    },
-    {
-        "id": 8,
-        "name": "Alastin",
-        "image": alastin,
-        "description": "description"
-    },
-    {
-        "id": 9,
-        "name": "Geeni",
-        "image": geeni,
-        "description": "description"
     }
-
 ]
 
 function Case({ about }) {
@@ -99,35 +86,43 @@ function Case({ about }) {
         <div className={style.case} id={idRoute}>
             <div className={style.title}>{about ? <h2>Мы выросли из компании семейного <img src={family} alt="family" /> типа в <img src={house} alt="house" /> компанию, успешно консультирующую многие бренды и цифровые продукты на рынке</h2> : <h2>Наши лучшие работы <img src={billiard} alt='billiard' /> </h2>}</div>
             <div className={style.case__child}>
-                <div>
-                    <Swiper
-                        slidesPerView={4}
-                        spaceBetween={8}
-                        mousewheel={true}
-                        direction={"vertical"}
-                        loop={true}
-                        modules={[Mousewheel]}
-                        className="mySwiper"
-                    >
-                        {
-                            data ?
-                                data.map((i, index) => (
-                                    <SwiperSlide
+                <div className={style.list__wrapper}>
+                    {
+                        data ?
+                            about ?
+                                data.slice(0, 4).map((i, index) => (
+                                    <div
                                         style={
                                             index === activeTextIndex
                                                 ? { opacity: "1" }
                                                 : { opacity: "0.5" }}
                                         onClick={() => setActiveTextIndex(index)}
                                         key={index}
-                                        className='swiper__laptop'
+                                        className={style.list__of__our__works}
                                     >
-                                        {i.name} <div className='line'></div>
-                                    </SwiperSlide>
+                                        {i.name} <div className={style.case__list__line}></div>
+                                    </div>
                                 ))
-                                :
-                                <></>
-                        }
-                    </Swiper>
+                            :
+                            data.map((i, index) => (
+                                <div
+                                    style={
+                                        index === activeTextIndex
+                                            ? { opacity: "1" }
+                                            : { opacity: "0.5" }}
+                                    onClick={() => setActiveTextIndex(index)}
+                                    key={index}
+                                    className={style.list__of__our__works}
+                                >
+                                {i.name} <div className={style.case__list__line}></div>
+                                </div>
+                            ))
+                        :
+                        <></>
+                    }
+                    {
+                        about ? <p>Все эти проекты делаются с помощью рук наших лучших сотрудников</p> : <></>
+                    }
                 </div>
                 <div className={style.active__wrapper}>
                     {
@@ -164,13 +159,25 @@ function Case({ about }) {
                     className="mySwiper"
                 >
                     {
+                        about ?
+                        data.slice(0, 4).map((c) => (
+                            <SwiperSlide key={c.id}>
+                                <div className='swiper-card-wrapper'>
+                                    <div className='mobile__swiper__card'>
+                                        <img src={c.image} alt="" />
+                                        <p>{c.description}</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))
+                        :
                         data.map((c) => (
                             <SwiperSlide key={c.id}>
                                 <div className='swiper-card-wrapper'>
-                                <div className='mobile__swiper__card'>
-                                    <img src={c.image} alt="" />
-                                    <p>{c.description}</p>
-                                </div>
+                                    <div className='mobile__swiper__card'>
+                                        <img src={c.image} alt="" />
+                                        <p>{c.description}</p>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         ))
