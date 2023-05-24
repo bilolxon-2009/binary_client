@@ -16,7 +16,7 @@
     margin: auto;
     margin-bottom: 49px;
 
-    h1 {
+    &>h1 {
         font-family: $font-sfpro-bold;
         font-style: normal;
         font-weight: 650;
@@ -35,11 +35,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .branches_googlemap {
+        width: 591px;
+        height: 353px
+    }
 }
 
 .branches__name {
 
     ul {
+        position: relative;
+
+        &>.dropdown {
+            bottom: 0;
+        }
 
         li {
 
@@ -90,5 +100,29 @@
 
     .conclusion_man {
         height: 30px;
+    }
+
+
+}
+
+@media only screen and (max-width:956px) {
+    .footer__container {
+        &>h1 {
+            font-size: 32px;
+        }
+
+        .branches {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+            .branches_googlemap {
+                width: 360px;
+                height: 200px
+            }
+        }
+
+
     }
 }

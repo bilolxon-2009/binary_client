@@ -6,7 +6,7 @@ import stars from "../../essets/stars.svg";
 import ScrollRoute from '../../utils/scrollroute/Scrollroute';
 import { Container } from '../../utils/Components';
 import { useLocation } from 'react-router-dom';
-
+import Language from "../../utils/language/Language"
 const Footer = () => {
   const [idRoute, setIdRoute] = useState("footer")
   let location = useLocation().pathname
@@ -46,12 +46,14 @@ const Footer = () => {
                     <br />
                     Instagram LinkedIn</p>
                 </li>
+                <Language pos={"bottom"} />
+
               </ul>
             </div>
             <div className={style.branches__location}>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.0083286400622!2d69.2871754105118!3d41.35217269642482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8cacae23bd15%3A0x507f55c1eeefc123!2sLady%20D!5e0!3m2!1sru!2s!4v1682741009826!5m2!1sru!2s"
-                width="591"
-                height="353"
+
+                className={style.branches_googlemap}
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -61,11 +63,12 @@ const Footer = () => {
           </div>
         </div>
         <div className={style.footer__conclusion}>
-          Начните воплощать мечту <img className={style.conclusion_starts} src={stars} alt="" />
+          <span>Начните воплощать мечту</span> <img className={style.conclusion_starts} src={stars} alt="" />
           <br />
-          в реальность <img className={style.conclusion_man} src={man} alt="" /> в
-          месте с нами
+          <span>в реальность</span> <img className={style.conclusion_man} src={man} alt="" /> <span>в
+            месте с нами</span>
         </div>
+
 
 
         <ScrollRoute routeName={idRoute} />

@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg"
 import { Link } from 'react-router-dom';
 // Please use CSS module
 import bars from "../../assets/bars_icon.svg"
-import Language from '../../utils/laguage/Language';
+import Language from '../../utils/language/Language';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
