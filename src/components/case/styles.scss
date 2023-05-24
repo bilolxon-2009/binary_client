@@ -1,40 +1,5 @@
 @import "../../variables";
 
-.swiper {
-    width: 420px;
-    height: 250px;
-    margin-top: 60px;
-    cursor: pointer;
-    font-family: $font-sfpro-regular;
-}
-
-.swiper-slide {
-    font-size: 32px;
-    font-weight: 500px;
-
-}
-.line {
-    margin-top: 10px;
-    width: 100%;
-    border: 1px solid #ffffff80;
-}
-
-@media only screen and (max-width: 1050px){
-    .swiper{
-        width: 320px;
-    }
-    .swiper-slide{
-        font-size: 28px;
-    }
-}
-@media only screen and (max-width: 850px){
-    .swiper{
-        width: 220px;
-    }
-    .swiper-slide{
-        font-size: 24px;
-    }
-}
 @media only screen and (max-width: 768px){
     .swiper{
         width: 100%;
